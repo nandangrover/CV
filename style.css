@@ -84,3 +84,49 @@ body {
   padding-right: 10px;
   font-family: 'Roboto Regular', sans-serif;
 }
+
+.contentColor {
+  background-color: #2CBBAD;
+}
+
+.header {
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px 20px 0px 48px;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.blockHolder {
+  padding: 10px 0 10px 0;
+}
+
+.contentDesig {
+  color: #000000;
+  font-weight: 600;
+}
+
+.companyName {
+  font-size: 18px;
+  font-family: 'Roboto Regular', sans-serif;
+  font-weight: 100;
+}
+
+.dateStarted {
+  font-size: 11px;
+  font-family: 'Roboto Regular', sans-serif;
+  color: #2CBBAD;
+  font-weight: 400;
+  font-style: italic;
+  float: left;
+}
+
+.locationCompany {
+  font-size: 11px;
+  font-family: 'Roboto Regular', sans-serif;
+  color: #2CBBAD;
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+  float: right;
+}

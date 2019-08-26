@@ -7,6 +7,33 @@
       "email": "nandangrover.5@gmail.com",
       "number": "9869365725",
       "location": "Seawoods, Navi Mumbai"
-    }
+    },
+    "resumeContent": 
+    [
+      {
+        "header": "Work Experience",
+        "workExperience": 
+        [
+          {
+            "designation" : "Sofware Developer",
+            "companyName": "MITR Learning and Media",
+            "dateStarted": "06/2018 - Present",
+            "location": "Sakinaka, Mumbai"
+          },
+          {
+            "designation" : "Sofware Developer",
+            "companyName": "MITR Learning and Media",
+            "dateStarted": "06/2018 - Present",
+            "location": "Sakinaka, Mumbai"
+          },
+          {
+            "designation" : "Sofware Developer",
+            "companyName": "MITR Learning and Media",
+            "dateStarted": "06/2018 - Present",
+            "location": "Sakinaka, Mumbai"
+          }
+        ]
+      }
+    ]
   }
 }

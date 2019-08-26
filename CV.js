@@ -33,7 +33,9 @@ class resume {
   }
 
   createElements() {
-    this.topNavigation(); 
+    this.topNavigation();
+    
+    this.resumeContent();
   }
 
   topNavigation() {
@@ -75,6 +77,32 @@ class resume {
     this.createDiv({ className: 'icon', id: 'icon3', appendTo: 'iconHolder3' });
     this.createDiv({ className: 'fas fa-map-marker-alt icon', id: 'location', appendTo: 'icon3' });
     
+  }
+
+  resumeContent() {
+    this.createDiv({ className: 'resumeContent', id: 'resumeContent', appendTo: 'main' });
+
+    this.createDiv({ className: 'leftPartition', id: 'leftPartitionContent', appendTo: 'resumeContent' });
+
+    this.createDiv({ className: 'workExperience', id: 'workExperience', appendTo: 'leftPartitionContent' });
+
+    this.createDiv({ className: 'header', id: 'workExperienceHeader', appendTo: 'workExperience', html:  this.config.elements.resumeContent[0].header});
+
+    this.config.elements.resumeContent[0].workExperience.forEach((element, idx) => {
+      this.createDiv({ className: 'blockHolder', id: `blockHolder_${idx}`, appendTo: 'workExperience' });
+      // left-block
+      this.createDiv({ className: 'leftBlock contentColor', id: 'leftBlock', appendTo: `blockHolder_${idx}` });
+      // text-bloc
+      this.createDiv({ className: 'textBlock', id: `textBlock_${idx}`, appendTo: `blockHolder_${idx}` });
+
+      this.createDiv({ className: 'designation contentDesig', id: `designation_${idx}`, appendTo: `textBlock_${idx}`, html: this.config.elements.resumeContent[0].workExperience[idx]['designation'] });
+
+      this.createDiv({ className: 'companyName', id: `companyName_${idx}`, appendTo: `textBlock_${idx}`, html: this.config.elements.resumeContent[0].workExperience[idx]['companyName'] });
+
+      this.createDiv({ className: 'dateStarted', id: `dateStarted_${idx}`, appendTo: `textBlock_${idx}`, html: this.config.elements.resumeContent[0].workExperience[idx]['dateStarted'] });
+
+      this.createDiv({ className: 'locationCompany', id: `locationCompany_${idx}`, appendTo: `textBlock_${idx}`, html: this.config.elements.resumeContent[0].workExperience[idx]['location'] });
+    });
   }
 
   createDiv({ className, id, appendTo, html = '' }) {
