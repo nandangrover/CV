@@ -1,0 +1,86 @@
+body {
+  background-color: #202028;
+  margin: 0;
+}
+
+#main {
+  width: 595px;
+  height: 842px;
+  background-color: #FFFFFF;
+  margin: auto;
+}
+
+#topNavContainer {
+  position: relative;
+  padding: 20px 0 20px 0px;
+  border-bottom: 2px solid #2CBBAD;
+}
+
+.textBlock {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px 0px 20px;
+}
+
+#name {
+  font-size: 25px;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.designation {
+  font-size: 18px;
+  font-family: 'Roboto Regular', sans-serif;
+  color: #2CBBAD;
+}
+
+.leftBlock {
+  position: relative;
+  height: 50px;
+  width: 30px;
+  background-color: #364456;
+  display: inline-block;
+}
+
+.bio {
+  width: 270px;
+  font-size: 12px;
+  padding-top: 10px;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.leftPartition {
+  display: inline-flex;
+}
+
+.rightPartition {
+  display: inline-flex;
+  float: right;
+  padding-right: 10px;
+}
+
+.iconHolder {
+  position: relative;
+  position: relative;
+  padding-bottom: 10px;
+  text-align: right;
+}
+.iconsHolder {
+  position: relative;
+  width: 194px;
+}
+
+.icon {
+  display: inline-flex;
+  width: 20px;
+  margin: auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.iconText {
+  display: inline-flex;
+  font-size: 12px;
+  padding-right: 10px;
+  font-family: 'Roboto Regular', sans-serif;
+}
