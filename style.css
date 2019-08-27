@@ -4,8 +4,8 @@ body {
 }
 
 #main {
-  width: 595px;
-  height: 842px;
+  width: 21cm;
+  height: 29.7cm;
   background-color: #FFFFFF;
   margin: auto;
 }
@@ -21,6 +21,7 @@ body {
   display: inline-block;
   vertical-align: top;
   padding: 0 20px 0px 20px;
+  max-width: 305px;
 }
 
 #name {
@@ -43,14 +44,15 @@ body {
 }
 
 .bio {
-  width: 270px;
+  width: 323px;
   font-size: 12px;
   padding-top: 10px;
   font-family: 'Roboto Regular', sans-serif;
 }
 
 .leftPartition {
-  display: inline-flex;
+  display: inline-block;
+  max-width: 394px;
 }
 
 .rightPartition {
@@ -128,5 +130,36 @@ body {
   font-weight: 400;
   font-style: italic;
   position: relative;
-  float: right;
+  text-align: right;
 }
+
+.description {
+  padding: 0 0 0 15px;
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  margin-top: 2px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\25aa";
+  color: #2CBBAD;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -14px;
+}
+
+/* @media print {
+  body{
+      width: 21cm;
+      height: 29.7cm;
+      margin: 30mm 45mm 30mm 45mm; 
+      /* change the margins as you want them to be. */
+ } 
+} */

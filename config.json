@@ -18,7 +18,11 @@
             "designation" : "Sofware Developer",
             "companyName": "MITR Learning and Media",
             "dateStarted": "06/2018 - Present",
-            "location": "Sakinaka, Mumbai"
+            "location": "Sakinaka, Mumbai",
+            "description": [
+              "Was successful in doing Was successful in doingWas successful in doing",
+              "Was successful in doing ...."
+            ]
           },
           {
             "designation" : "Sofware Developer",
@@ -31,6 +35,39 @@
             "companyName": "MITR Learning and Media",
             "dateStarted": "06/2018 - Present",
             "location": "Sakinaka, Mumbai"
+          }
+        ]
+      },
+      {
+        "header": "Education",
+        "education": 
+        [
+          {
+            "degree" : "Bachelor in Technology",
+            "collegeName": "Bharati Vidyapeeth College of Engineering",
+            "dateStarted": "06/2014 - 06/2018",
+            "location": "Kharghar, Navi Mumbai",
+            "description": [
+              "Was successful in doing Was successful in doingWas successful in doing"
+            ]
+          },
+          {
+            "degree" : "Bachelor in Technology",
+            "collegeName": "Bharati Vidyapeeth College of Engineering",
+            "dateStarted": "06/2014 - 06/2018",
+            "location": "Kharghar, Navi Mumbai",
+            "description": [
+              "Was successful in doing Was successful in doingWas successful in doing"
+            ]
+          },
+          {
+            "degree" : "Bachelor in Technology",
+            "collegeName": "Bharati Vidyapeeth College of Engineering",
+            "dateStarted": "06/2014 - 06/2018",
+            "location": "Kharghar, Navi Mumbai",
+            "description": [
+              "Was successful in doing Was successful in doingWas successful in doing"
+            ]
           }
         ]
       }
