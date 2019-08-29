@@ -10,14 +10,19 @@ body {
   margin: auto;
 }
 
-.savePDF {
-  width: 84px;
-  height: 30px;
+.print {
+  width: 108px;
+  height: 47px;
   position: relative;
   cursor: pointer;
   border-radius: 10px;
+  background-color: #2CBBAD;
+  font-size: 18px;
   display: flex;
   margin: auto;
+  color: #ffffff;
+  justify-content: center;
+  font-family: 'Roboto Regular', sans-serif;
 }
 
 #topNavContainer {
@@ -187,3 +192,14 @@ a:visited {
   color: #2CBBAD;
 }
 @page { size: auto;  margin: 0mm; }
+
+@media print {
+
+  html, body {
+    height:100%; 
+    margin: 0 !important; 
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+}

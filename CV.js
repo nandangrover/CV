@@ -4,15 +4,24 @@ class resume {
     this.config = {};
     this.elemObj = {};
     this.loadSequence('loadJSON');
+    document.getElementById("print").addEventListener('click', () => this.loadSequence('print'))
   }
 
   loadSequence(loadFunction) {
     switch(loadFunction) {
+      case 'preLoad':
+        this.loadJSON();
+      break;
       case 'loadJSON':
         this.loadJSON();
       break; 
       case 'createStructure':
         this.createStructure();
+      break;
+      case 'print':
+      setTimeout(() => {
+        window.print();
+      }, 0); 
       break;
     }
   }
@@ -171,8 +180,6 @@ class resume {
     const div = document.createElement(type);
     div.setAttribute('class', className);
     div.setAttribute('id', id);
-    console.log(attr);
-    
     if (attr) {
       attr.forEach(({ key, value }) =>  div.setAttribute(key, value));
     }
