@@ -76,6 +76,18 @@ class resume {
     this.createElement({ className: 'iconText', id: 'location', appendTo: 'iconHolder3', html: this.config.elements.topNav.location });
     this.createElement({ className: 'icon', id: 'icon3', appendTo: 'iconHolder3' });
     this.createElement({ className: 'fas fa-map-marker-alt icon', id: 'location', appendTo: 'icon3' });
+
+    // gitHub Icon
+    this.createElement({ className: 'iconHolder', id: 'iconHolder4', appendTo: 'iconsHolder' });
+    this.createElement({ className: 'iconText', id: 'github', appendTo: 'iconHolder4', html: 'gitHub', type: 'a', attr: [{ key : 'href', value: this.config.elements.topNav.github}] });
+    this.createElement({ className: 'icon', id: 'icon4', appendTo: 'iconHolder4' });
+    this.createElement({ className: 'fab fa-github icon', id: 'github', appendTo: 'icon4' });
+
+    // linkedIn Iconfab
+    this.createElement({ className: 'iconHolder', id: 'iconHolder5', appendTo: 'iconsHolder' });
+    this.createElement({ className: 'iconText', id: 'linkedin', appendTo: 'iconHolder5', html: 'linkedIn', type: 'a', attr: [{ key : 'href', value: this.config.elements.topNav.linkedin}] });
+    this.createElement({ className: 'icon', id: 'icon5', appendTo: 'iconHolder5' });
+    this.createElement({ className: 'fab fa-linkedin icon', id: 'linkedin', appendTo: 'icon5' });
     
   }
 
@@ -83,6 +95,8 @@ class resume {
     this.createElement({ className: 'resumeContent', id: 'resumeContent', appendTo: 'main' });
 
     this.createElement({ className: 'leftPartition', id: 'leftPartitionContent', appendTo: 'resumeContent' });
+
+    this.createElement({ className: 'rightPartitionContent', id: 'rightPartitionContent', appendTo: 'resumeContent' });
 
     this.creatWorkExperienceBlock(this.config.elements.resumeContent[0].workExperience);
 
@@ -153,10 +167,15 @@ class resume {
     });
   }
 
-  createElement({ className, id, appendTo, html = '' , type = 'div'}) {
+  createElement({ className, id, appendTo, html = '' , type = 'div', attr = [] }) {
     const div = document.createElement(type);
     div.setAttribute('class', className);
     div.setAttribute('id', id);
+    console.log(attr);
+    
+    if (attr) {
+      attr.forEach(({ key, value }) =>  div.setAttribute(key, value));
+    }
     document.getElementById(appendTo).appendChild(div);
     div.innerHTML = html;
     return div;

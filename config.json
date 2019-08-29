@@ -6,7 +6,9 @@
       "bio": "Full stack web developer with a passion for learning new technologies. Fast learner, organised, enthusiastic and with good communication skills. Able to join team and start delivering quickly.",
       "email": "nandangrover.5@gmail.com",
       "number": "9869365725",
-      "location": "Seawoods, Navi Mumbai"
+      "location": "Seawoods, Navi Mumbai",
+      "github": "https://github.com/nandangrover",
+      "linkedin": "https://www.linkedin.com/in/nandan-grover-01152010a"
     },
     "resumeContent": 
     [
@@ -70,6 +72,9 @@
             ]
           }
         ]
+      },
+      {
+        "header": "Skills & Competencies"
       }
     ]
   }

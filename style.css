@@ -1,12 +1,22 @@
 body {
   background-color: #202028;
-  margin: 0;
+  margin: 0 auto;
 }
 
 #main {
   width: 21cm;
   height: 29.7cm;
   background-color: #FFFFFF;
+  margin: auto;
+}
+
+.savePDF {
+  width: 84px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
   margin: auto;
 }
 
@@ -61,10 +71,15 @@ body {
   padding-right: 10px;
 }
 
+.rightPartitionContent {
+  display: inline-block;
+  max-width: 394px;
+}
+
 .iconHolder {
   position: relative;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
   text-align: right;
 }
 .iconsHolder {
@@ -155,11 +170,20 @@ ul li::before {
   margin-left: -14px;
 }
 
-/* @media print {
-  body{
-      width: 21cm;
-      height: 29.7cm;
-      margin: 30mm 45mm 30mm 45mm; 
-      /* change the margins as you want them to be. */
- } 
-} */
+a {
+  color: #2CBBAD;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: #2CBBAD;
+}
+@page { size: auto;  margin: 0mm; }
