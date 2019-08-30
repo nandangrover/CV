@@ -78,9 +78,14 @@ body {
   padding-right: 10px;
 }
 
+.leftPartitionContent {
+  display: table-cell;
+  width: 396px;
+}
+
 .rightPartitionContent {
-  display: inline-block;
-  max-width: 394px;
+  display: table-cell;
+  width: 397px;
 }
 
 .iconHolder {
@@ -178,7 +183,8 @@ ul li::before {
 }
 
 a {
-  color: #2CBBAD;
+  color: #800080;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -191,8 +197,30 @@ a:active {
 }
 
 a:visited {
-  color: #2CBBAD;
+  color: #800080;
 }
+
+.skills {
+  display: inline-block;
+  background-color: #2CBBAD;
+  margin-right: 10px;
+  color: #ffffff;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+#skills_block {
+  padding: 10px 20px 0 48px;
+  font-family: 'Roboto Regular', sans-serif;
+  max-width: 315px;
+}
+
+.description.personalProject {
+  padding: 0 0 10px 0;
+}
+
 @page { size: auto;  margin: 0mm; }
 
 @media print {

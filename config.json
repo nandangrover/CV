@@ -13,7 +13,7 @@
     "resumeContent": 
     [
       {
-        "header": "Work Experience",
+        "header": "WORK EXPERIENCE",
         "workExperience": 
         [
           {
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "header": "Education",
+        "header": "EDUCATION",
         "education": 
         [
           {
@@ -74,7 +74,28 @@
         ]
       },
       {
-        "header": "Skills & Competencies"
+        "header": "SKILLS & COMPETENCIES",
+        "skills": ["Javascript", "Vue", "React", "php7", "CSS3", "HTML5", "mongoDB", "MySql", "Node", "Electron", "GraphQl", "Docker", "Persistent", "Detail Oriented"]
+      },
+      {
+        "header": "PERSONAL PROJECTS",
+        "personalProjects": 
+      [
+        {
+          "name": "JIRA Active Tickets Helper",
+          "description" : "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on. It’s currently published and people can find it in the chrome extension store.",
+          "link": "https://chrome.google.com/webstore/detail/jira-active-tickets-helpe/ihdilmkkkdnmkdehbgfibfnemjplgobo"
+        },
+        {
+          "name": "Social Network Using React and Socket.io",
+          "description" : "Chat Application with group chat and one to one chat capability by forming secure private rooms.",
+          "link": "https://social-network-node.herokuapp.com"
+        }
+      ]
+      },
+      {
+        "header": "INTERESTS",
+        "interests": ["Reading", "running", "coding (certified geek)", "Harry Potter"]
       }
     ]
   }

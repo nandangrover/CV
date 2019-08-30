@@ -103,13 +103,19 @@ class resume {
   resumeContent() {
     this.createElement({ className: 'resumeContent', id: 'resumeContent', appendTo: 'main' });
 
-    this.createElement({ className: 'leftPartition', id: 'leftPartitionContent', appendTo: 'resumeContent' });
+    this.createElement({ className: 'leftPartitionContent', id: 'leftPartitionContent', appendTo: 'resumeContent' });
 
     this.createElement({ className: 'rightPartitionContent', id: 'rightPartitionContent', appendTo: 'resumeContent' });
 
     this.creatWorkExperienceBlock(this.config.elements.resumeContent[0].workExperience);
 
     this.creatEducationBlock(this.config.elements.resumeContent[1].education);
+
+    this.createSkillsBlock(this.config.elements.resumeContent[2].skills);
+
+    this.createPersonalProjectsBlock(this.config.elements.resumeContent[3].personalProjects);
+
+    this.createInterestsBlock(this.config.elements.resumeContent[4].interests);
   }
 
   creatWorkExperienceBlock(path) {
@@ -174,6 +180,45 @@ class resume {
         })
       }
     });
+  }
+
+  createSkillsBlock(path) {
+    // Skills
+    this.createElement({ className: 'skillsContainer', id: 'skillsContainer', appendTo: 'rightPartitionContent' });
+
+    this.createElement({ className: 'header', id: 'skillsHeader', appendTo: 'skillsContainer', html:  this.config.elements.resumeContent[2].header});
+
+    this.createElement({ className: 'textBlock', id: `skills_block`, appendTo: `skillsContainer` });
+
+    path.forEach((skill, idx) => {
+      this.createElement({ className: 'skills', id: `skill_${idx}`, appendTo: 'skills_block', html:  skill});
+    });
+  }
+
+  createPersonalProjectsBlock(path) {
+    // Skills
+    this.createElement({ className: 'projectsContainer', id: 'projectsContainer', appendTo: 'rightPartitionContent' });
+
+    this.createElement({ className: 'header', id: 'projects_header', appendTo: 'projectsContainer', html:  this.config.elements.resumeContent[3].header});
+
+    path.forEach((project, idx) => {
+      this.createElement({ className: 'blockHolder', id: `blockHolder_personal_${idx}`, appendTo: 'projectsContainer'});
+
+      this.createElement({ className: 'leftBlock contentColor', id: 'leftBlock', appendTo: `blockHolder_personal_${idx}` });
+      // text-bloc
+      this.createElement({ className: 'textBlock', id: `textBlock_personal_1${idx}`, appendTo: `blockHolder_personal_${idx}` });
+
+      this.createElement({ className: 'designation contentDesig', id: `name_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: path[idx]['name'] });
+
+      this.createElement({ className: 'description personalProject', id: `description_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: path[idx]['description'] });
+
+      this.createElement({ className: 'iconText', id: `projectLink_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: 'Project Link', type: 'a', attr: [{ key : 'href', value: path[idx]['link'] }] });
+    });
+
+    createInterestsBlock(path) {
+      
+    }
+
   }
 
   createElement({ className, id, appendTo, html = '' , type = 'div', attr = [] }) {
