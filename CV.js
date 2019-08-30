@@ -218,7 +218,10 @@ class resume {
   }
 
   createInterestsBlock(path) {
-      
+    // Interests
+    this.createElement({ className: 'interestsContainer', id: 'interestsContainer', appendTo: 'rightPartitionContent' });
+
+    this.createElement({ className: 'header', id: 'interests_header', appendTo: 'interestsContainer', html:  this.config.elements.resumeContent[4].header}); 
   }
 
   createElement({ className, id, appendTo, html = '' , type = 'div', attr = [] }) {
