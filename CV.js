@@ -215,10 +215,10 @@ class resume {
       this.createElement({ className: 'iconText', id: `projectLink_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: 'Project Link', type: 'a', attr: [{ key : 'href', value: path[idx]['link'] }] });
     });
 
-    createInterestsBlock(path) {
-      
-    }
+  }
 
+  createInterestsBlock(path) {
+      
   }
 
   createElement({ className, id, appendTo, html = '' , type = 'div', attr = [] }) {
