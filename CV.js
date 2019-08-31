@@ -8,42 +8,40 @@ class resume {
   }
 
   loadSequence(loadFunction) {
-    switch(loadFunction) {
+    switch (loadFunction) {
       case 'preLoad':
         this.loadJSON();
-      break;
+        break;
       case 'loadJSON':
         this.loadJSON();
-      break; 
+        break;
       case 'createStructure':
         this.createStructure();
-      break;
+        break;
       case 'print':
-      setTimeout(() => {
         window.print();
-      }, 0); 
-      break;
+        break;
     }
   }
 
   loadJSON() {
     fetch(this.jsonURL, {
       method: 'GET',
-      headers:{
+      headers: {
         'Content-Type': 'application/json'
       }
     })
-    .then(res => res.json())
-    .then(response => {
-      this.config = response;
-      this.loadSequence('createStructure');
-    })
-    .catch(error => console.error('Error:', error));
+      .then(res => res.json())
+      .then(response => {
+        this.config = response;
+        this.loadSequence('createStructure');
+      })
+      .catch(error => console.error('Error:', error));
   }
 
   createStructure() {
     this.topNavigation();
-    
+
     this.resumeContent();
   }
 
@@ -88,16 +86,16 @@ class resume {
 
     // gitHub Icon
     this.createElement({ className: 'iconHolder', id: 'iconHolder4', appendTo: 'iconsHolder' });
-    this.createElement({ className: 'iconText', id: 'github', appendTo: 'iconHolder4', html: 'gitHub', type: 'a', attr: [{ key : 'href', value: this.config.elements.topNav.github}] });
+    this.createElement({ className: 'iconText', id: 'github', appendTo: 'iconHolder4', html: 'gitHub', type: 'a', attr: [{ key: 'href', value: this.config.elements.topNav.github }, , { key: 'target', value: '_blank' }] });
     this.createElement({ className: 'icon', id: 'icon4', appendTo: 'iconHolder4' });
     this.createElement({ className: 'fab fa-github icon', id: 'github', appendTo: 'icon4' });
 
     // linkedIn Iconfab
     this.createElement({ className: 'iconHolder', id: 'iconHolder5', appendTo: 'iconsHolder' });
-    this.createElement({ className: 'iconText', id: 'linkedin', appendTo: 'iconHolder5', html: 'linkedIn', type: 'a', attr: [{ key : 'href', value: this.config.elements.topNav.linkedin}] });
+    this.createElement({ className: 'iconText', id: 'linkedin', appendTo: 'iconHolder5', html: 'linkedIn', type: 'a', attr: [{ key: 'href', value: this.config.elements.topNav.linkedin }, { key: 'target', value: '_blank' }] });
     this.createElement({ className: 'icon', id: 'icon5', appendTo: 'iconHolder5' });
     this.createElement({ className: 'fab fa-linkedin icon', id: 'linkedin', appendTo: 'icon5' });
-    
+
   }
 
   resumeContent() {
@@ -109,11 +107,11 @@ class resume {
 
     this.creatWorkExperienceBlock(this.config.elements.resumeContent[0].workExperience);
 
+    this.createPersonalProjectsBlock(this.config.elements.resumeContent[3].personalProjects);
+
     this.creatEducationBlock(this.config.elements.resumeContent[1].education);
 
     this.createSkillsBlock(this.config.elements.resumeContent[2].skills);
-
-    this.createPersonalProjectsBlock(this.config.elements.resumeContent[3].personalProjects);
 
     this.createInterestsBlock(this.config.elements.resumeContent[4].interests);
   }
@@ -122,7 +120,7 @@ class resume {
     // Work Experience
     this.createElement({ className: 'workExperience', id: 'workExperience', appendTo: 'leftPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'workExperienceHeader', appendTo: 'workExperience', html:  this.config.elements.resumeContent[0].header});
+    this.createElement({ className: 'header', id: 'workExperienceHeader', appendTo: 'workExperience', html: this.config.elements.resumeContent[0].header });
 
     path.forEach((element, idx) => {
       this.createElement({ className: 'blockHolder', id: `blockHolder_${idx}`, appendTo: 'workExperience' });
@@ -152,9 +150,9 @@ class resume {
 
   creatEducationBlock(path) {
     // Education
-    this.createElement({ className: 'education', id: 'education', appendTo: 'leftPartitionContent' });
+    this.createElement({ className: 'education', id: 'education', appendTo: 'rightPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'educationHeader', appendTo: 'education', html:  this.config.elements.resumeContent[1].header});
+    this.createElement({ className: 'header', id: 'educationHeader', appendTo: 'education', html: this.config.elements.resumeContent[1].header });
 
     path.forEach((element, idx) => {
       this.createElement({ className: 'blockHolder', id: `blockHolder_1${idx}`, appendTo: 'education' });
@@ -186,23 +184,23 @@ class resume {
     // Skills
     this.createElement({ className: 'skillsContainer', id: 'skillsContainer', appendTo: 'rightPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'skillsHeader', appendTo: 'skillsContainer', html:  this.config.elements.resumeContent[2].header});
+    this.createElement({ className: 'header', id: 'skillsHeader', appendTo: 'skillsContainer', html: this.config.elements.resumeContent[2].header });
 
     this.createElement({ className: 'textBlock', id: `skills_block`, appendTo: `skillsContainer` });
 
     path.forEach((skill, idx) => {
-      this.createElement({ className: 'skills', id: `skill_${idx}`, appendTo: 'skills_block', html:  skill});
+      this.createElement({ className: 'skills', id: `skill_${idx}`, appendTo: 'skills_block', html: skill });
     });
   }
 
   createPersonalProjectsBlock(path) {
     // Skills
-    this.createElement({ className: 'projectsContainer', id: 'projectsContainer', appendTo: 'rightPartitionContent' });
+    this.createElement({ className: 'projectsContainer', id: 'projectsContainer', appendTo: 'leftPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'projects_header', appendTo: 'projectsContainer', html:  this.config.elements.resumeContent[3].header});
+    this.createElement({ className: 'header', id: 'projects_header', appendTo: 'projectsContainer', html: this.config.elements.resumeContent[3].header });
 
     path.forEach((project, idx) => {
-      this.createElement({ className: 'blockHolder', id: `blockHolder_personal_${idx}`, appendTo: 'projectsContainer'});
+      this.createElement({ className: 'blockHolder', id: `blockHolder_personal_${idx}`, appendTo: 'projectsContainer' });
 
       this.createElement({ className: 'leftBlock contentColor', id: 'leftBlock', appendTo: `blockHolder_personal_${idx}` });
       // text-bloc
@@ -212,7 +210,7 @@ class resume {
 
       this.createElement({ className: 'description personalProject', id: `description_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: path[idx]['description'] });
 
-      this.createElement({ className: 'iconText', id: `projectLink_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: 'Project Link', type: 'a', attr: [{ key : 'href', value: path[idx]['link'] }] });
+      this.createElement({ className: 'iconText', id: `projectLink_${idx}`, appendTo: `textBlock_personal_1${idx}`, html: 'Project Link', type: 'a', attr: [{ key: 'href', value: path[idx]['link'] }, { key: 'target', value: '_blank' }] });
     });
 
   }
@@ -221,15 +219,21 @@ class resume {
     // Interests
     this.createElement({ className: 'interestsContainer', id: 'interestsContainer', appendTo: 'rightPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'interests_header', appendTo: 'interestsContainer', html:  this.config.elements.resumeContent[4].header}); 
+    this.createElement({ className: 'header', id: 'interests_header', appendTo: 'interestsContainer', html: this.config.elements.resumeContent[4].header });
+
+    this.createElement({ className: 'textBlock', id: `interest_block`, appendTo: `interestsContainer` });
+
+    path.forEach((interest, idx) => {
+      this.createElement({ className: 'skills interest', id: `interes_${idx}`, appendTo: 'interest_block', html: interest });
+    });
   }
 
-  createElement({ className, id, appendTo, html = '' , type = 'div', attr = [] }) {
+  createElement({ className, id, appendTo, html = '', type = 'div', attr = [] }) {
     const div = document.createElement(type);
     div.setAttribute('class', className);
     div.setAttribute('id', id);
     if (attr) {
-      attr.forEach(({ key, value }) =>  div.setAttribute(key, value));
+      attr.forEach(({ key, value }) => div.setAttribute(key, value));
     }
     document.getElementById(appendTo).appendChild(div);
     div.innerHTML = html;

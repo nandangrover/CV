@@ -10,92 +10,121 @@
       "github": "https://github.com/nandangrover",
       "linkedin": "https://www.linkedin.com/in/nandan-grover-01152010a"
     },
-    "resumeContent": 
-    [
+    "resumeContent": [
       {
         "header": "WORK EXPERIENCE",
-        "workExperience": 
-        [
+        "workExperience": [
           {
-            "designation" : "Sofware Developer",
+            "designation": "Sofware Developer",
             "companyName": "MITR Learning and Media",
             "dateStarted": "06/2018 - Present",
             "location": "Sakinaka, Mumbai",
             "description": [
-              "Was successful in doing Was successful in doingWas successful in doing",
-              "Was successful in doing ...."
+              "As a developer at MITR I was a part of multiple projects ranging from work in Vanilla JS to latest frontend and backend frameworks. These projects can be grouped into two broad domains.",
+              "<b>Curriculum Associates - Lesson Editor (<i>VueJS, JavaScript (ES7), Docker, GraphQL, MySQL, php</i>):</b>",
+              "As an offshore team member of 4 people, my job is to build new features, address bugs and issues.",
+              "Support the team members and help them out in completing their tasks.",
+              "Attend daily scrum and provide updates to the rest of the team.",
+              "<b>Vanilla JS and Node (<i>JavaScript, React, jQuery, Canvas, HTML, CSS, Node</i>):</b> These projects included building tools in Node and creating interactive E-Learning materials using javascript and canvas. I got a chance to work on many such projects from companies such as Philips, IKEA, Chevron, Korn Ferry etc."
             ]
           },
           {
-            "designation" : "Sofware Developer",
-            "companyName": "MITR Learning and Media",
-            "dateStarted": "06/2018 - Present",
-            "location": "Sakinaka, Mumbai"
+            "designation": "Project Trainee",
+            "companyName": "Reliance Industries Limited",
+            "dateStarted": "06/2017 - 07/2017",
+            "location": "Ghansoli, Mumbai",
+            "description": [
+              "Researched blockchain technology and how it can be implemented in the cybersecurity domain.",
+              "Part of the team that was implementing Mokescreen as a deception technology to prevent data theft. "
+            ]
           },
           {
-            "designation" : "Sofware Developer",
-            "companyName": "MITR Learning and Media",
-            "dateStarted": "06/2018 - Present",
-            "location": "Sakinaka, Mumbai"
+            "designation": "Project Trainee",
+            "companyName": "Datamatics Global Services Limited",
+            "dateStarted": "06/2016 - 07/2016",
+            "location": "Andheri, Mumbai",
+            "description": [
+              "As a project trainee in Strategic Solutions Group, my responsibilities included researching ways Datamatics could integrate itself into the BPM landscape in India."
+            ]
           }
         ]
       },
       {
         "header": "EDUCATION",
-        "education": 
-        [
+        "education": [
           {
-            "degree" : "Bachelor in Technology",
+            "degree": "Bachelor of Engineering",
             "collegeName": "Bharati Vidyapeeth College of Engineering",
-            "dateStarted": "06/2014 - 06/2018",
+            "dateStarted": "2014 - 2018",
             "location": "Kharghar, Navi Mumbai",
             "description": [
-              "Was successful in doing Was successful in doingWas successful in doing"
+              "Passed with <b>6.56 CGPA</b> in <b> Computer Engineering</b>."
             ]
           },
           {
-            "degree" : "Bachelor in Technology",
-            "collegeName": "Bharati Vidyapeeth College of Engineering",
-            "dateStarted": "06/2014 - 06/2018",
+            "degree": "ISC - 12th",
+            "collegeName": "Ryan International School",
+            "dateStarted": "2012 - 2014",
             "location": "Kharghar, Navi Mumbai",
             "description": [
-              "Was successful in doing Was successful in doingWas successful in doing"
+              "Passed with <b>80%</b>."
             ]
           },
           {
-            "degree" : "Bachelor in Technology",
-            "collegeName": "Bharati Vidyapeeth College of Engineering",
-            "dateStarted": "06/2014 - 06/2018",
+            "degree": "ICSE - 10th",
+            "collegeName": "Ryan International School",
+            "dateStarted": "2010 - 2012",
             "location": "Kharghar, Navi Mumbai",
             "description": [
-              "Was successful in doing Was successful in doingWas successful in doing"
+              "Passed with <b>83%</b>."
             ]
           }
         ]
       },
       {
         "header": "SKILLS & COMPETENCIES",
-        "skills": ["Javascript", "Vue", "React", "php7", "CSS3", "HTML5", "mongoDB", "MySql", "Node", "Electron", "GraphQl", "Docker", "Persistent", "Detail Oriented"]
+        "skills": [
+          "Javascript",
+          "Vue",
+          "React",
+          "PHP7",
+          "CSS3",
+          "HTML5",
+          "mongoDB",
+          "MySQL",
+          "Node",
+          "MERN Stack",
+          "Electron",
+          "GraphQL",
+          "Docker",
+          "Persistent",
+          "Detail Oriented"
+        ]
       },
       {
         "header": "PERSONAL PROJECTS",
-        "personalProjects": 
-      [
-        {
-          "name": "JIRA Active Tickets Helper",
-          "description" : "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on. It’s currently published and people can find it in the chrome extension store.",
-          "link": "https://chrome.google.com/webstore/detail/jira-active-tickets-helpe/ihdilmkkkdnmkdehbgfibfnemjplgobo"
-        },
-        {
-          "name": "Social Network Using React and Socket.io",
-          "description" : "Chat Application with group chat and one to one chat capability by forming secure private rooms.",
-          "link": "https://social-network-node.herokuapp.com"
-        }
-      ]
+        "personalProjects": [
+          {
+            "name": "JIRA Active Tickets Helper",
+            "description": "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on. It’s currently published and people can find it in the chrome extension store.",
+            "link": "https://chrome.google.com/webstore/detail/jira-active-tickets-helpe/ihdilmkkkdnmkdehbgfibfnemjplgobo"
+          },
+          {
+            "name": "Social Network Using React and Socket.io",
+            "description": "Chat Application with group chat and one to one chat capability by forming secure private rooms.",
+            "link": "https://github.com/nandangrover/Social-Network-Node"
+          }
+        ]
       },
       {
         "header": "INTERESTS",
-        "interests": ["Reading", "running", "coding (certified geek)", "Harry Potter"]
+        "interests": [
+          "Reading",
+          "Running",
+          "Coding (certified geek)",
+          "Harry Potter",
+          "Ruwix Cube"
+        ]
       }
     ]
   }
