@@ -107,11 +107,11 @@ class resume {
 
     this.creatWorkExperienceBlock(this.config.elements.resumeContent[0].workExperience);
 
-    this.createPersonalProjectsBlock(this.config.elements.resumeContent[3].personalProjects);
+    this.createPersonalProjectsBlock(this.config.elements.resumeContent[1].personalProjects);
 
-    this.creatEducationBlock(this.config.elements.resumeContent[1].education);
+    this.creatEducationBlock(this.config.elements.resumeContent[2].education);
 
-    this.createSkillsBlock(this.config.elements.resumeContent[2].skills);
+    this.createSkillsBlock(this.config.elements.resumeContent[3].skills);
 
     this.createInterestsBlock(this.config.elements.resumeContent[4].interests);
   }

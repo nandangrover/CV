@@ -50,6 +50,21 @@
         ]
       },
       {
+        "header": "PERSONAL PROJECTS",
+        "personalProjects": [
+          {
+            "name": "JIRA Active Tickets Helper",
+            "description": "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on. It’s currently published and people can find it in the chrome extension store.",
+            "link": "https://chrome.google.com/webstore/detail/jira-active-tickets-helpe/ihdilmkkkdnmkdehbgfibfnemjplgobo"
+          },
+          {
+            "name": "Social Network Using React and Socket.io",
+            "description": "Chat Application with group chat and one to one chat capability by forming secure private rooms.",
+            "link": "https://github.com/nandangrover/Social-Network-Node"
+          }
+        ]
+      },
+      {
         "header": "EDUCATION",
         "education": [
           {
@@ -99,21 +114,6 @@
           "Docker",
           "Persistent",
           "Detail Oriented"
-        ]
-      },
-      {
-        "header": "PERSONAL PROJECTS",
-        "personalProjects": [
-          {
-            "name": "JIRA Active Tickets Helper",
-            "description": "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on. It’s currently published and people can find it in the chrome extension store.",
-            "link": "https://chrome.google.com/webstore/detail/jira-active-tickets-helpe/ihdilmkkkdnmkdehbgfibfnemjplgobo"
-          },
-          {
-            "name": "Social Network Using React and Socket.io",
-            "description": "Chat Application with group chat and one to one chat capability by forming secure private rooms.",
-            "link": "https://github.com/nandangrover/Social-Network-Node"
-          }
         ]
       },
       {
