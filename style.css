@@ -160,6 +160,7 @@ body {
   font-style: italic;
   position: relative;
   text-align: right;
+  min-width: 325px;
 }
 
 .description {
