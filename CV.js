@@ -152,7 +152,7 @@ class resume {
     // Education
     this.createElement({ className: 'education', id: 'education', appendTo: 'rightPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'educationHeader', appendTo: 'education', html: this.config.elements.resumeContent[1].header });
+    this.createElement({ className: 'header', id: 'educationHeader', appendTo: 'education', html: this.config.elements.resumeContent[2].header });
 
     path.forEach((element, idx) => {
       this.createElement({ className: 'blockHolder', id: `blockHolder_1${idx}`, appendTo: 'education' });
@@ -184,7 +184,7 @@ class resume {
     // Skills
     this.createElement({ className: 'skillsContainer', id: 'skillsContainer', appendTo: 'rightPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'skillsHeader', appendTo: 'skillsContainer', html: this.config.elements.resumeContent[2].header });
+    this.createElement({ className: 'header', id: 'skillsHeader', appendTo: 'skillsContainer', html: this.config.elements.resumeContent[3].header });
 
     this.createElement({ className: 'textBlock', id: `skills_block`, appendTo: `skillsContainer` });
 
@@ -197,7 +197,7 @@ class resume {
     // Skills
     this.createElement({ className: 'projectsContainer', id: 'projectsContainer', appendTo: 'leftPartitionContent' });
 
-    this.createElement({ className: 'header', id: 'projects_header', appendTo: 'projectsContainer', html: this.config.elements.resumeContent[3].header });
+    this.createElement({ className: 'header', id: 'projects_header', appendTo: 'projectsContainer', html: this.config.elements.resumeContent[1].header });
 
     path.forEach((project, idx) => {
       this.createElement({ className: 'blockHolder', id: `blockHolder_personal_${idx}`, appendTo: 'projectsContainer' });
