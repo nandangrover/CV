@@ -1,5 +1,5 @@
 <p align="center">
-  <img  alt="Make it smart" height="128px" width="128px" src="https://ca.slack-edge.com/T025LG3MW-UEHPGSFFC-69097c4c4add-512">
+  <img  alt="Smartass" height="128px" width="128px" src="https://raw.githubusercontent.com/nandangrover/CV/master/T025LG3MW-UEHPGSFFC-69097c4c4add-512.jpeg">
 </p>
 <h1 align="center"><a href="https://nandangrover.github.io/CV/">CV</a></h1>
 
