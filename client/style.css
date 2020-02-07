@@ -231,6 +231,14 @@ a:visited {
   padding: 0 0 5px 0;
 }
 
+.resume-editor {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 143px;
+  height: 40px;
+}
+
 @page { size: auto;  margin: 0mm; }
 
 @media print {
