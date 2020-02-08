@@ -7,4 +7,4 @@ const BlobSchema = new Schema({
   jsonData: String,
 });
 
-module.exports = Blob = mongoose.model('users', BlobSchema);
+module.exports = Blob = mongoose.model('blob', BlobSchema);

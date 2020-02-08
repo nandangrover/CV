@@ -2,21 +2,42 @@ const express = require('express');
 const Blob = require('../models/Blob');
 const router = express.Router();
 
+const staticId = ['Nandan', 'Aditi', 'Amit', 'Neeraj', 'Yash', 'Avinash', 'Shivani'];
+
 router.get("/getJson/:id", (req, res) => {
-  Blob.find({user: req.params.id})
-    .then(blob => res.json(blob))
+  const id = req.params.id;
+  if (staticId.includes(id)) {
+    Blob.find({ user: req.params.id })
+      .then(blob => res.json(blob))
+      .catch(err => console.log(err));
+  } else {
+    return res.status(500).json({success: false, error: 'Sorry, error'});
+  }
 });
 
 router.post("/setJson/:id", (req, res) => {
-  const newResume = new Blob({
-    user: req.params.id,
-    json: req.body.json,
-  });
-  newResume.save().then(item => res.json(item));
+  const id = req.params.id;
+  if (staticId.includes(id)) {
+    const newResume = new Blob({
+      user: req.params.id,
+      jsonData: req.body.jsonData,
+    });
+    newResume.save().then(item => res.json(item));
+  } else {
+    return res.status(500).json({success: false, error: 'Sorry, error'});
+  }
 });
 
 router.patch("/updateJson/:id", (req, res) => {
-
+  const id = req.params.id;
+  if (staticId.includes(id)) {
+    Blob.updateOne({ user: req.params.id }, { $set: { jsonData: req.body.jsonData }}, { $currentDate: { lastModified: true } })
+      .then(() => Blob.find({ user: req.params.id }))
+      .then(blob => res.json(blob))
+      .catch(err => console.log(err));
+  } else {
+    return res.status(500).json({success: false, error: 'Sorry, error'});
+  }
 });
 
 module.exports = router;

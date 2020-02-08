@@ -10,12 +10,12 @@ let template = (name, templateFunction) => {
 
 // Register the templates.
 template('defaultCV', () => {
-  scriptLoader('CV.js');
+  scriptLoader('templates/defaultCV.js');
 });
 
 // Register the templates.
 template('editorResume', () => {
-  scriptLoader('resumeEditor.js');
+  scriptLoader('templates/resumeEditor.js');
 });
 // Define the routes. Each route is described with a route path & a template to render
 // when entering that path. A template can be a string (file name), or a function that
@@ -48,6 +48,7 @@ let resolveRoute = (route) => {
 
 const scriptLoader = path => {
   const script = document.createElement('script');
+  script.setAttribute('type', 'module');
   script.onload = () => {
     console.log('Script Loaded')
   };
@@ -58,7 +59,6 @@ const scriptLoader = path => {
 let router = (evt) => {
   const url = window.location.pathname || "/";
   const routeResolved = resolveRoute(url);
-  console.log(window.location);
   
   routeResolved();
 };

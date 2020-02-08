@@ -12,6 +12,60 @@ body {
   margin: auto;
 }
 
+.editorHolder.editor-visible {
+  padding-top: 0px;
+}
+
+.editorHolder {
+  padding-top: 10px;
+}
+
+.textEditor.editor-visible {
+  width: 21cm;
+  height: 29.7cm;
+  float: right;
+  margin: auto;
+  display: table-cell;
+}
+
+.textEditor {
+  width: 21cm;
+  height: 29.7cm;
+  margin: auto;
+  display: none;
+}
+
+body[editor=true] {
+  background-color: #202028;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.main.editor-visible {
+  width: 21cm;
+  height: 29.7cm;
+  background-color: #FFFFFF;
+  margin: auto;
+  float: left;
+  display: table-cell;
+}
+
+.print.editor-visible {
+  width: 108px;
+  vertical-align: middle;
+  height: 47px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #413c69;
+  font-size: 18px;
+  margin: auto;
+  color: #ffffff;
+  justify-content: center;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
 .print {
   width: 108px;
   height: 47px;
@@ -24,6 +78,23 @@ body {
   margin: auto;
   color: #ffffff;
   justify-content: center;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.submitJsonChange.editor-visible {
+  width: 148px;
+  vertical-align: middle;
+  height: 67px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #413c69;
+  font-size: 18px;
+  margin: auto;
+  margin-bottom: 50px;
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
   font-family: 'Roboto Regular', sans-serif;
 }
 
@@ -235,8 +306,27 @@ a:visited {
   text-align: center;
   margin: auto;
   display: flex;
-  width: 143px;
+  width: 253px;
   height: 40px;
+  font-size: 20px;
+}
+
+.submit {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-top: 52px;
+  background-color: #413c69;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  border: 0px;
+  padding: 10px 30px 10px 30px;
+  cursor: pointer;
+}
+
+.heading-resume-editor {
+  text-align: center;
 }
 
 @page { size: auto;  margin: 0mm; }
