@@ -2,7 +2,7 @@ const express = require('express');
 const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
-const dataBlob = require("./routes/dataBlob");
+const dataBlob = require("./server/routes/dataBlob");
 
 const app = express();
 
@@ -32,9 +32,9 @@ mongoose
   // Routes
   app.use('/api/dataBlob', dataBlob);
 
-  app.use(express.static(path.join(__dirname, "../client")));
+  app.use(express.static(path.join(__dirname, "client")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "index.html"));
   });
 
   const PORT = process.env.PORT || 5000;
