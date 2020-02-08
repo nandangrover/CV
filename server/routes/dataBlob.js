@@ -3,7 +3,7 @@ const Blob = require('../models/Blob');
 const atob = require('../utility/atob');
 const router = express.Router();
 
-const staticId = ['AwesomeGrover', 'Aditi', 'Amit', 'Neeraj', 'Yash', 'Avinash', 'Shivani'];
+const staticId = ['AwesomeGrover', 'Nandan', 'Aditi', 'Amit', 'Neeraj', 'Yash', 'Avinash', 'Shivani'];
 
 router.get("/getJson/:id", (req, res) => {
   const id = atob(req.params.id);

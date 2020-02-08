@@ -98,6 +98,10 @@ body[editor=true] {
   font-family: 'Roboto Regular', sans-serif;
 }
 
+.submitJsonChange {
+  display: none;
+}
+
 #topNavContainer {
   position: relative;
   padding: 20px 0 20px 0px;

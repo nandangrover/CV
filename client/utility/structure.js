@@ -62,7 +62,8 @@ export default class Structure {
       this.createElement({ className: 'iconText', id: 'location', appendTo: 'iconHolder3', html: this.config.elements.topNav.location });
       this.createElement({ className: 'icon', id: 'icon3', appendTo: 'iconHolder3' });
       this.createElement({ className: 'fas fa-map-marker-alt icon', id: 'location', appendTo: 'icon3' });
-  
+      
+      if (this.config.elements.topNav.github || this.config.elements.topNav.linkedin) {
       // gitHub Icon
       this.createElement({ className: 'iconHolder', id: 'iconHolder4', appendTo: 'iconsHolder' });
       this.createElement({ className: 'iconText', id: 'github', appendTo: 'iconHolder4', html: 'gitHub', type: 'a', attr: [{ key: 'href', value: this.config.elements.topNav.github }, , { key: 'target', value: '_blank' }] });
@@ -74,6 +75,11 @@ export default class Structure {
       this.createElement({ className: 'iconText', id: 'linkedin', appendTo: 'iconHolder5', html: 'linkedIn', type: 'a', attr: [{ key: 'href', value: this.config.elements.topNav.linkedin }, { key: 'target', value: '_blank' }] });
       this.createElement({ className: 'icon', id: 'icon5', appendTo: 'iconHolder5' });
       this.createElement({ className: 'fab fa-linkedin icon', id: 'linkedin', appendTo: 'icon5' });
+      } else {
+          Array.from(document.getElementsByClassName("iconHolder")).forEach((elem, idx) => {
+          document.getElementById(`iconHolder${idx+1}`).style.paddingBottom = "25px";
+        })
+      }
   
     }
   
