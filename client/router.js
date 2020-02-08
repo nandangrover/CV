@@ -10,12 +10,12 @@ let template = (name, templateFunction) => {
 
 // Register the templates.
 template('defaultCV', () => {
-  scriptLoader('templates/defaultCV.js');
+  scriptLoader('core/defaultCV.js');
 });
 
 // Register the templates.
 template('editorResume', () => {
-  scriptLoader('templates/resumeEditor.js');
+  scriptLoader('core/resumeEditor.js');
 });
 // Define the routes. Each route is described with a route path & a template to render
 // when entering that path. A template can be a string (file name), or a function that

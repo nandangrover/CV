@@ -1,10 +1,11 @@
-import Structure from '../utility/structure.js';
+import themes from '../themes/index.js';
 import gateway from '../utility/gateways.js';
 import { defaultData } from '../configDefault.js';
 
 class resumeEditor {
   constructor() {
     this.inputId = '';
+    this.themeSelected = '';
     this.codeEditor = {};
     this.loadSequence('loadJSON');
 
@@ -50,11 +51,17 @@ class resumeEditor {
     this.createElement({ className: 'holder', id: `holder`, appendTo: 'main' });
 
 
-    this.createElement({ className: 'heading-resume-editor', id: `heading-resume-editor`, appendTo: 'holder', type: 'h1', html: "Enter your name to load previously loaded resumes or create new ones" });
+    this.createElement({ className: 'heading-resume-editor', id: `heading-resume-editor`, appendTo: 'holder', type: 'h1', html: "Enter your name and select a theme to load previously loaded resumes or create new ones" });
 
     this.createElement({ className: 'info-holder', id: `info-holder`, appendTo: 'holder' });
 
     this.createElement({ className: 'resume-editor', id: `resume-editor`, appendTo: 'info-holder', type: 'input', attr: [{ key: 'placeholder', value: 'Enter your name' }] });
+
+    this.createElement({ className: 'theme-selector', id: `theme-selector`, appendTo: 'info-holder', type: 'select', attr: [{ key: 'placeholder', value: 'Select a theme' }] });
+
+    Object.keys(themes).forEach((theme, idx) => {
+      this.createElement({ className: 'theme-selector-option', id: `theme-selector-option-${idx}`, html: theme.split('_')[0],appendTo: 'theme-selector', type: 'option', attr: [{ key: 'value', value: theme }] });
+    })
 
     this.createElement({ className: 'submit', id: `submit`, appendTo: 'info-holder', type: 'button', html: 'Submit' });
 
@@ -64,19 +71,18 @@ class resumeEditor {
   async createStructure() {
     let config = {};
     this.inputId = document.getElementById("resume-editor").value;
+    this.themeSelected = document.getElementById("theme-selector").value;
   
     try {
-      config = await gateway.getJson(this.inputId);
+      config = await gateway.getJson(this.inputId, this.themeSelected);
       if (!config.length) {
-        config = await gateway.setJson(this.inputId, JSON.stringify(defaultData));
+        config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(defaultData[this.themeSelected]));
         this.setDefaultStructure(JSON.parse(config.jsonData));
-      } else if (config.success && config.success === false) {
-        console.error('Unauthorized access');
       } else if (config[0].jsonData) {
         this.setDefaultStructure(JSON.parse(config[0].jsonData));
       }
     } catch (e) {
-      console.log(e)
+      alert('Something went wrong. Please try again');
     }
   }
 
@@ -88,14 +94,14 @@ class resumeEditor {
     this.codeEditor.setValue(JSON.stringify(data, null, '\t'))
     this.showEditor();
     // Make HTML
-    new Structure(data);
+    new themes[this.themeSelected](data);
   }
 
   async submitJsonChange() {
     let config = {};
     
     try {
-      config = await gateway.updateJson(this.inputId, this.codeEditor.getValue());
+      config = await gateway.updateJson(this.inputId, this.themeSelected, this.codeEditor.getValue());
       this.setDefaultStructure(JSON.parse(config[0].jsonData));
     } catch (e) {
       console.error(e);

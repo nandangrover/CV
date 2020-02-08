@@ -315,6 +315,17 @@ a:visited {
   font-size: 20px;
 }
 
+.theme-selector {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 253px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+  background: transparent;
+}
+
 .submit {
   position: relative;
   display: flex;

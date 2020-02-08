@@ -1,4 +1,4 @@
-export default class Structure {
+export default class themeElon_1 {
     constructor(config) {
       this.config = config;
       this.elemObj = {};
@@ -224,6 +224,4 @@ export default class Structure {
       div.innerHTML = html;
       return div;
     }
-  
-  
   }
