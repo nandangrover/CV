@@ -1,13 +1,14 @@
 const express = require('express');
 const Blob = require('../models/Blob');
+const atob = require('../utility/atob');
 const router = express.Router();
 
-const staticId = ['Nandan', 'Aditi', 'Amit', 'Neeraj', 'Yash', 'Avinash', 'Shivani'];
+const staticId = ['AwesomeGrover', 'Aditi', 'Amit', 'Neeraj', 'Yash', 'Avinash', 'Shivani'];
 
 router.get("/getJson/:id", (req, res) => {
-  const id = req.params.id;
+  const id = atob(req.params.id);
   if (staticId.includes(id)) {
-    Blob.find({ user: req.params.id })
+    Blob.find({ user: id })
       .then(blob => res.json(blob))
       .catch(err => console.log(err));
   } else {
@@ -16,10 +17,10 @@ router.get("/getJson/:id", (req, res) => {
 });
 
 router.post("/setJson/:id", (req, res) => {
-  const id = req.params.id;
+  const id = atob(req.params.id);
   if (staticId.includes(id)) {
     const newResume = new Blob({
-      user: req.params.id,
+      user: id,
       jsonData: req.body.jsonData,
     });
     newResume.save().then(item => res.json(item));
@@ -29,10 +30,10 @@ router.post("/setJson/:id", (req, res) => {
 });
 
 router.patch("/updateJson/:id", (req, res) => {
-  const id = req.params.id;
+  const id = atob(req.params.id);
   if (staticId.includes(id)) {
-    Blob.updateOne({ user: req.params.id }, { $set: { jsonData: req.body.jsonData }}, { $currentDate: { lastModified: true } })
-      .then(() => Blob.find({ user: req.params.id }))
+    Blob.updateOne({ user: id }, { $set: { jsonData: req.body.jsonData }}, { $currentDate: { lastModified: true } })
+      .then(() => Blob.find({ user: id }))
       .then(blob => res.json(blob))
       .catch(err => console.log(err));
   } else {

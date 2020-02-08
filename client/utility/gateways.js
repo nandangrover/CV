@@ -1,6 +1,6 @@
 export default {
     async getJson(id) {
-        const response = await fetch(`/api/dataBlob/getJson/${id}`, {
+        const response = await fetch(`/api/dataBlob/getJson/${btoa(id)}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -10,7 +10,7 @@ export default {
     },
 
     async setJson(id, data) {
-      const response = await fetch(`/api/dataBlob/setJson/${id}`, {
+      const response = await fetch(`/api/dataBlob/setJson/${btoa(id)}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export default {
   },
 
   async updateJson(id, data) {
-    const response = await fetch(`/api/dataBlob/updateJson/${id}`, {
+    const response = await fetch(`/api/dataBlob/updateJson/${btoa(id)}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
