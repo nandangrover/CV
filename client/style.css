@@ -23,7 +23,6 @@ body {
 .textEditor.editor-visible {
   width: 21cm;
   height: 29.7cm;
-  float: right;
   margin: auto;
   display: table-cell;
 }
