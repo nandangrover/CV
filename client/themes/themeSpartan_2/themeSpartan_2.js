@@ -1,19 +1,25 @@
-export default class themeElon_1 {
+class themeElon_1 {
     constructor(config) {
       this.config = config;
       this.elemObj = {};
-      this.loadSequence('createStructure');
-      document.getElementById("print").addEventListener('click', () => this.loadSequence('print'));
+      document.addEventListener("DOMContentLoaded", () => {
+        this.loadSequence('addEvents');
+      }, this);
     }
   
     loadSequence(loadFunction) {
       switch (loadFunction) {
+        case 'addEvents':
+          window.parent.document.getElementById("print").removeEventListener('click', () => this.loadSequence('print'));
+          window.parent.document.getElementById("print").addEventListener('click', () => this.loadSequence('print'));
+          // this.loadSequence('createStructure');
+        break;
         case 'createStructure':
           this.createStructure();
-          break;
+        break;
         case 'print':
           window.print();
-          break;
+        break;
       }
     }
   
@@ -225,3 +231,5 @@ export default class themeElon_1 {
       return div;
     }
   }
+
+  new themeElon_1(window.parent.themeElon_1);

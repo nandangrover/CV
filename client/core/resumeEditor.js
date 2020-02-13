@@ -9,8 +9,9 @@ class resumeEditor {
     this.codeEditor = {};
     this.loadSequence('loadJSON');
 
-    document.getElementById("submit").addEventListener('click', () => this.loadSequence('createStructure'))
-    document.getElementById("submitJsonChange").addEventListener('click', () => this.loadSequence('submitJsonChange'))
+    document.getElementById("submit").addEventListener('click', () => this.loadSequence('createStructure'));
+
+    document.getElementById("submitJsonChange").addEventListener('click', () => this.loadSequence('submitJsonChange'));
   }
 
   loadSequence(loadFunction) {
@@ -28,10 +29,7 @@ class resumeEditor {
   }
 
   loadJSON() {
-    this.createElement({ className: 'editorHolder', id: `editorHolder`, appendTo: 'body' });
     this.createElement({ className: 'textEditor', id: `textEditor`, appendTo: 'editorHolder' });
-    this.createElement({ className: 'submitJsonChange', id: `submitJsonChange`, appendTo: 'body', type: 'button', html: 'Submit JSON Change' });
-    
 
     this.codeEditor = ace.edit("textEditor");
     this.codeEditor.setTheme("ace/theme/twilight");
@@ -59,7 +57,7 @@ class resumeEditor {
 
     this.createElement({ className: 'theme-selector', id: `theme-selector`, appendTo: 'info-holder', type: 'select', attr: [{ key: 'placeholder', value: 'Select a theme' }] });
 
-    Object.keys(themes).forEach((theme, idx) => {
+    themes.forEach((theme, idx) => {
       this.createElement({ className: 'theme-selector-option', id: `theme-selector-option-${idx}`, html: theme.split('_')[0],appendTo: 'theme-selector', type: 'option', attr: [{ key: 'value', value: theme }] });
     })
 
@@ -76,7 +74,7 @@ class resumeEditor {
     try {
       config = await gateway.getJson(this.inputId, this.themeSelected);
       if (!config.length) {
-        config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(defaultData[this.themeSelected]));
+        config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(defaultData[this.themeSelected] || JSON.stringify(defaultData['themeElon_1'])));
         this.setDefaultStructure(JSON.parse(config.jsonData));
       } else if (config[0].jsonData) {
         this.setDefaultStructure(JSON.parse(config[0].jsonData));
@@ -86,15 +84,17 @@ class resumeEditor {
     }
   }
 
-  setDefaultStructure(data) {
-    const main = document.getElementById('main');
-    while (main.firstChild) {
-      main.removeChild(main.firstChild);
-    }
+  setDefaultStructure(data, reload = false) {
     this.codeEditor.setValue(JSON.stringify(data, null, '\t'))
-    this.showEditor();
-    // Make HTML
-    new themes[this.themeSelected](data);
+    if (!reload) {
+      this.showEditor();
+      document.body.removeChild(document.getElementById('main'));
+    }
+    // Load iFrame
+    window[this.themeSelected] = data;
+    let iFrame = document.getElementById("template");
+    iFrame.src = `../themes/${this.themeSelected}/index.html`;
+    iFrame.style.display = 'block';
   }
 
   async submitJsonChange() {
@@ -102,7 +102,7 @@ class resumeEditor {
     
     try {
       config = await gateway.updateJson(this.inputId, this.themeSelected, this.codeEditor.getValue());
-      this.setDefaultStructure(JSON.parse(config[0].jsonData));
+      this.setDefaultStructure(JSON.parse(config[0].jsonData), true);
     } catch (e) {
       console.error(e);
     }
@@ -110,18 +110,15 @@ class resumeEditor {
 
   showEditor() {
     document.body.setAttribute('editor', 'true');
-    document.getElementById("main").classList.add('editor-visible');
     document.getElementById("editorHolder").classList.add('editor-visible');
     document.getElementById("print").classList.add('editor-visible');
     document.getElementById("submitJsonChange").classList.add('editor-visible');
-    document.body.appendChild(document.getElementById("print"));
     document.getElementById("textEditor").classList.add('editor-visible');
   }
 
 
   hideEditor() {
     document.body.setAttribute('editor', 'false');
-    document.getElementById("main").classList.remove('editor-visible');
     document.getElementById("editorHolder").classList.remove('editor-visible');
     document.getElementById("print").classList.remove('editor-visible');
     document.getElementById("submitJsonChange").classList.remove('editor-visible');

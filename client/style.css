@@ -12,6 +12,18 @@ body {
   margin: auto;
 }
 
+#template {
+  width: 21cm;
+  height: 29.7cm;
+  background-color: #FFFFFF;
+  margin: auto;
+  float: left;
+  display: table-cell;
+  overflow: hidden;
+  display: none;
+  border: 0;
+}
+
 .editorHolder.editor-visible {
   padding-top: 0px;
 }
@@ -39,15 +51,6 @@ body[editor=true] {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-}
-
-.main.editor-visible {
-  width: 21cm;
-  height: 29.7cm;
-  background-color: #FFFFFF;
-  margin: auto;
-  float: left;
-  display: table-cell;
 }
 
 .print.editor-visible {
@@ -82,223 +85,21 @@ body[editor=true] {
 
 .submitJsonChange.editor-visible {
   width: 148px;
-  vertical-align: middle;
   height: 67px;
   position: relative;
   cursor: pointer;
   border-radius: 10px;
   background-color: #413c69;
   font-size: 18px;
-  margin: auto;
-  margin-bottom: 50px;
-  color: #ffffff;
-  justify-content: center;
   display: flex;
+  margin: auto;
+  color: #ffffff;
   font-family: 'Roboto Regular', sans-serif;
+  margin-bottom: 20px;
 }
 
 .submitJsonChange {
   display: none;
-}
-
-#topNavContainer {
-  position: relative;
-  padding: 20px 0 20px 0px;
-  border-bottom: 2px solid #413c69;
-}
-
-.textBlock {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 20px 0px 20px;
-  max-width: 325px;
-}
-
-#name {
-  font-size: 25px;
-  font-family: 'Roboto Regular', sans-serif;
-  font-weight: bold;
-}
-
-.designation {
-  font-size: 18px;
-  font-family: 'Roboto Regular', sans-serif;
-  color: #000000;
-  font-weight: 600;
-}
-
-.leftBlock {
-  position: relative;
-  height: 50px;
-  width: 30px;
-  background-color: #413c69;
-  display: inline-block;
-}
-
-.bio {
-  width: 323px;
-  font-size: 12px;
-  padding-top: 10px;
-  font-family: 'Roboto Regular', sans-serif;
-}
-
-.leftPartition {
-  display: inline-block;
-  max-width: 394px;
-}
-
-.rightPartition {
-  display: inline-flex;
-  float: right;
-  padding-right: 10px;
-}
-
-.leftPartitionContent {
-  display: table-cell;
-  width: 396px;
-}
-
-.rightPartitionContent {
-  display: table-cell;
-  width: 397px;
-}
-
-.iconHolder {
-  position: relative;
-  position: relative;
-  padding-bottom: 7px;
-  text-align: right;
-}
-.iconsHolder {
-  position: relative;
-  width: 194px;
-}
-
-.icon {
-  display: inline-flex;
-  width: 20px;
-  margin: auto;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.iconText {
-  display: inline-flex;
-  font-size: 12px;
-  padding-right: 10px;
-  font-family: 'Roboto Regular', sans-serif;
-}
-
-.contentColor {
-  background-color: #413c69;
-}
-
-.header {
-  position: relative;
-  font-size: 25px;
-  font-weight: 600;
-  padding: 10px 20px 0px 48px;
-  font-family: 'Roboto Regular', sans-serif;
-}
-
-.blockHolder {
-  padding: 0px 0 10px 0;
-}
-
-.contentDesig {
-  color: #000000;
-  font-weight: 600;
-}
-
-.companyName {
-  font-size: 18px;
-  font-family: 'Roboto Regular', sans-serif;
-  font-weight: 100;
-}
-
-.dateStarted {
-  font-size: 12px;
-  font-family: 'Roboto Regular', sans-serif;
-  color: #000000;
-  font-weight: 600;
-  font-style: italic;
-  float: left;
-}
-
-.locationCompany {
-  font-size: 12px;
-  font-family: 'Roboto Regular', sans-serif;
-  color: #000000;
-  font-weight: 600;
-  font-style: italic;
-  position: relative;
-  text-align: right;
-  min-width: 325px;
-}
-
-.description {
-  padding: 0 0 0 15px;
-  font-family: 'Roboto Regular', sans-serif;
-  font-size: 13px;
-  box-sizing: border-box;
-  margin-top: 2px;
-  margin-bottom: 0px;
-}
-
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\25aa";
-  color: #413c69;
-  font-weight: bold;
-  font-size: 15px;
-  display: inline-block;
-  width: 1em;
-  margin-left: -14px;
-}
-
-a {
-  color: #800080;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  color: black;
-}
-
-a:visited {
-  color: #800080;
-}
-
-.skills {
-  display: inline-block;
-  background-color: #413c69;
-  margin-right: 10px;
-  color: #ffffff;
-  padding: 3px 10px 3px 10px;
-  border-radius: 5px;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-#skills_block {
-  padding: 10px 20px 0 48px;
-  font-family: 'Roboto Regular', sans-serif;
-  max-width: 315px;
-}
-
-#interest_block {
-  padding: 10px 20px 0 48px;
-  font-family: 'Roboto Regular', sans-serif;
-  max-width: 315px;
 }
 
 .description.personalProject {
@@ -341,17 +142,4 @@ a:visited {
 
 .heading-resume-editor {
   text-align: center;
-}
-
-@page { size: auto;  margin: 0mm; }
-
-@media print {
-
-  html, body {
-    height:100%; 
-    margin: 0 !important; 
-    padding: 0 !important;
-    overflow: hidden;
-  }
-
 }
