@@ -43,7 +43,7 @@ class resumeEditor {
 
     this.codeEditor.session.setUseWrapMode(true);
 
-    document.getElementById('textEditor').style.fontSize='12px'; 
+    document.getElementById('textEditor').style.fontSize='20px'; 
 
     // Imput Elements
     this.createElement({ className: 'holder', id: `holder`, appendTo: 'main' });
@@ -77,8 +77,8 @@ class resumeEditor {
         config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(await this.loadJSON(this.themeSelected)) || JSON.stringify(await this.loadJSON('themeElon_1')));
         this.setDefaultStructure(JSON.parse(config.jsonData));
       } else if (config[0].jsonData) {
-        this.setDefaultStructure(JSON.parse(config[0].jsonData));
-        // this.setDefaultStructure(await this.loadJSON(this.themeSelected));
+        // this.setDefaultStructure(JSON.parse(config[0].jsonData));
+        this.setDefaultStructure(await this.loadJSON(this.themeSelected));
       }
     } catch (e) {
       console.log(e);
@@ -97,7 +97,6 @@ class resumeEditor {
   }
 
   setDefaultStructure(data, reload = false) {
-    console.log(data)
     this.codeEditor.setValue(JSON.stringify(data, null, '\t'))
     if (!reload) {
       this.showEditor();
@@ -112,10 +111,10 @@ class resumeEditor {
 
   async submitJsonChange() {
     let config = {};
-    console.log(this.themeSelected)
     try {
       config = await gateway.updateJson(this.inputId, this.themeSelected, this.codeEditor.getValue());
       this.setDefaultStructure(JSON.parse(config[0].jsonData), true);
+      window.scrollTo(0,0);
     } catch (e) {
       console.error(e);
     }
