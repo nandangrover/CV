@@ -1,23 +1,23 @@
 import themes from '../themes/index.js';
 import gateway from '../utility/gateways.js';
-import { defaultData } from '../configDefault.js';
 
 class resumeEditor {
   constructor() {
     this.inputId = '';
     this.themeSelected = '';
     this.codeEditor = {};
-    this.loadSequence('loadJSON');
+    this.loadSequence('loadEditor');
 
     document.getElementById("submit").addEventListener('click', () => this.loadSequence('createStructure'));
 
     document.getElementById("submitJsonChange").addEventListener('click', () => this.loadSequence('submitJsonChange'));
   }
+  
 
   loadSequence(loadFunction) {
     switch (loadFunction) {
-      case 'loadJSON':
-        this.loadJSON();
+      case 'loadEditor':
+        this.loadEditor();
       break;
       case 'createStructure':
         this.createStructure();
@@ -28,7 +28,7 @@ class resumeEditor {
     }
   }
 
-  loadJSON() {
+  loadEditor() {
     this.createElement({ className: 'textEditor', id: `textEditor`, appendTo: 'editorHolder' });
 
     this.codeEditor = ace.edit("textEditor");
@@ -43,7 +43,7 @@ class resumeEditor {
 
     this.codeEditor.session.setUseWrapMode(true);
 
-    document.getElementById('textEditor').style.fontSize='20px'; 
+    document.getElementById('textEditor').style.fontSize='10px'; 
 
     // Imput Elements
     this.createElement({ className: 'holder', id: `holder`, appendTo: 'main' });
@@ -74,17 +74,30 @@ class resumeEditor {
     try {
       config = await gateway.getJson(this.inputId, this.themeSelected);
       if (!config.length) {
-        config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(defaultData[this.themeSelected] || JSON.stringify(defaultData['themeElon_1'])));
+        config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(await this.loadJSON(this.themeSelected)) || JSON.stringify(await this.loadJSON('themeElon_1')));
         this.setDefaultStructure(JSON.parse(config.jsonData));
       } else if (config[0].jsonData) {
-        this.setDefaultStructure(JSON.parse(config[0].jsonData));
+        // this.setDefaultStructure(JSON.parse(config[0].jsonData));
+        this.setDefaultStructure(await this.loadJSON(this.themeSelected));
       }
     } catch (e) {
+      console.log(e);
       alert('Something went wrong. Please try again');
     }
   }
 
+  async loadJSON(themeSelected) {
+    const response = await fetch(`../config/${themeSelected}.json`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+        }
+      })
+    return response.json();
+  }
+
   setDefaultStructure(data, reload = false) {
+    console.log(data)
     this.codeEditor.setValue(JSON.stringify(data, null, '\t'))
     if (!reload) {
       this.showEditor();
@@ -99,7 +112,7 @@ class resumeEditor {
 
   async submitJsonChange() {
     let config = {};
-    
+    console.log(this.themeSelected)
     try {
       config = await gateway.updateJson(this.inputId, this.themeSelected, this.codeEditor.getValue());
       this.setDefaultStructure(JSON.parse(config[0].jsonData), true);

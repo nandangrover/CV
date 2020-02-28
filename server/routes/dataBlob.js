@@ -34,7 +34,7 @@ router.patch("/updateJson/:id/:theme", (req, res) => {
   const id = atob(req.params.id);
   if (staticId.includes(id)) {
     Blob.updateOne({ user: id, theme: req.params.theme }, { $set: { jsonData: req.body.jsonData }}, { $currentDate: { lastModified: true } })
-      .then(() => Blob.find({ user: id }))
+      .then(() => Blob.find({ user: id, theme: req.params.theme }))
       .then(blob => res.json(blob))
       .catch(err => console.log(err));
   } else {

@@ -1,1 +1,1 @@
-export  default ['themeElon_1'];
+export  default ['themeElon_1', 'themeSpartan_2'];
