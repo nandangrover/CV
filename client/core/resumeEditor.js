@@ -43,7 +43,7 @@ class resumeEditor {
 
     this.codeEditor.session.setUseWrapMode(true);
 
-    document.getElementById('textEditor').style.fontSize='10px'; 
+    document.getElementById('textEditor').style.fontSize='12px'; 
 
     // Imput Elements
     this.createElement({ className: 'holder', id: `holder`, appendTo: 'main' });
@@ -77,8 +77,8 @@ class resumeEditor {
         config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(await this.loadJSON(this.themeSelected)) || JSON.stringify(await this.loadJSON('themeElon_1')));
         this.setDefaultStructure(JSON.parse(config.jsonData));
       } else if (config[0].jsonData) {
-        // this.setDefaultStructure(JSON.parse(config[0].jsonData));
-        this.setDefaultStructure(await this.loadJSON(this.themeSelected));
+        this.setDefaultStructure(JSON.parse(config[0].jsonData));
+        // this.setDefaultStructure(await this.loadJSON(this.themeSelected));
       }
     } catch (e) {
       console.log(e);
