@@ -12,19 +12,19 @@ class resumeEditor {
 
     document.getElementById("submitJsonChange").addEventListener('click', () => this.loadSequence('submitJsonChange'));
   }
-  
+
 
   loadSequence(loadFunction) {
     switch (loadFunction) {
       case 'loadEditor':
         this.loadEditor();
-      break;
+        break;
       case 'createStructure':
         this.createStructure();
-      break;
+        break;
       case 'submitJsonChange':
         this.submitJsonChange();
-      break;
+        break;
     }
   }
 
@@ -43,7 +43,7 @@ class resumeEditor {
 
     this.codeEditor.session.setUseWrapMode(true);
 
-    document.getElementById('textEditor').style.fontSize='20px'; 
+    document.getElementById('textEditor').style.fontSize = '20px';
 
     // Imput Elements
     this.createElement({ className: 'holder', id: `holder`, appendTo: 'main' });
@@ -58,7 +58,7 @@ class resumeEditor {
     this.createElement({ className: 'theme-selector', id: `theme-selector`, appendTo: 'info-holder', type: 'select', attr: [{ key: 'placeholder', value: 'Select a theme' }] });
 
     themes.forEach((theme, idx) => {
-      this.createElement({ className: 'theme-selector-option', id: `theme-selector-option-${idx}`, html: theme.split('_')[0],appendTo: 'theme-selector', type: 'option', attr: [{ key: 'value', value: theme }] });
+      this.createElement({ className: 'theme-selector-option', id: `theme-selector-option-${idx}`, html: theme.split('_')[0], appendTo: 'theme-selector', type: 'option', attr: [{ key: 'value', value: theme }] });
     })
 
     this.createElement({ className: 'submit', id: `submit`, appendTo: 'info-holder', type: 'button', html: 'Submit' });
@@ -70,15 +70,15 @@ class resumeEditor {
     let config = {};
     this.inputId = document.getElementById("resume-editor").value;
     this.themeSelected = document.getElementById("theme-selector").value;
-  
+
     try {
       config = await gateway.getJson(this.inputId, this.themeSelected);
       if (!config.length) {
         config = await gateway.setJson(this.inputId, this.themeSelected, JSON.stringify(await this.loadJSON(this.themeSelected)) || JSON.stringify(await this.loadJSON('themeElon_1')));
         this.setDefaultStructure(JSON.parse(config.jsonData));
       } else if (config[0].jsonData) {
-        // this.setDefaultStructure(JSON.parse(config[0].jsonData));
-        this.setDefaultStructure(await this.loadJSON(this.themeSelected));
+        this.setDefaultStructure(JSON.parse(config[0].jsonData));
+        // this.setDefaultStructure(await this.loadJSON(this.themeSelected));
       }
     } catch (e) {
       console.log(e);
@@ -91,8 +91,8 @@ class resumeEditor {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
-        }
-      })
+      }
+    })
     return response.json();
   }
 
@@ -114,7 +114,7 @@ class resumeEditor {
     try {
       config = await gateway.updateJson(this.inputId, this.themeSelected, this.codeEditor.getValue());
       this.setDefaultStructure(JSON.parse(config[0].jsonData), true);
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     } catch (e) {
       console.error(e);
     }
