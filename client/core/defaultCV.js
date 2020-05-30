@@ -7,4 +7,10 @@ import gateway from '../utility/gateways.js';
   let iFrame = document.getElementById("template");
   iFrame.src = `../themes/themeElon_1/index.html`;
   iFrame.style.display = 'block';
+  console.log(window.location.pathname)
+  if (window.location.pathname === '/download') {
+    iFrame.onload = function () {
+      window.document.getElementById("print").click()
+    }
+  }
 })();
