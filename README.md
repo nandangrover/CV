@@ -9,3 +9,6 @@ A Sample HTML and JSON template to build your CV
 - Make CV for showcasing my skills
 - JSON configurable to configure CV to anyone's needs.
 - Attractive UI.
+
+## Details
+- Go to https://nandangrover.herokuapp.com/secretEditor, and enter username 'Test' to play around making your own configurable CV.
