@@ -3,18 +3,17 @@ const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const dataBlob = require("./server/routes/dataBlob");
+const config = require('./config');
 
 const app = express();
 
 app.use(bodyParser.json());
 
-const db = 'mongodb://nandan:nandan123@ds241968.mlab.com:41968/resume';
-
 // Allow cross origin request
 // app.use(cors());
 
 mongoose
-  .connect(db, {
+  .connect(config.db, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
