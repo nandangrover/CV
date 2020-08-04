@@ -25,6 +25,11 @@ class themeSpartan_2 {
   
   
     createStructure() {
+      const sheet = document.getElementById("theme-style");
+      sheet.disabled = true;
+      sheet.parentNode.removeChild(sheet);
+      this.addCss(`assets/css/orbit-${this.config['Style Number'] ?? 1}.css`)
+
       const name = document.getElementsByClassName('name')[0];
       name.innerHTML = this.config.name;
 
@@ -52,6 +57,18 @@ class themeSpartan_2 {
       }
      
     }
+
+    addCss(fileName) {
+      const head = document.head;
+      const link = document.createElement("link");
+    
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = fileName;
+    
+      head.appendChild(link);
+    }
+    
   
     createElement({ className, id, appendTo, html = '', type = 'div', attr = [] }) {
       const div = document.createElement(type);
