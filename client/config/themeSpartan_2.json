@@ -1,8 +1,14 @@
 {
+	"OPTIONAL_FIELDS":"Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText,OPTIONAL_FIELDS(obviously)",
 	"name": "Nandan Grover",
+	"profileImage": "https://www.nandangrover.com/assets/images/profile.jpeg",
 	"designation": "Full Stack Developer",
 	"email": "nandangrover.5@gmail.com",
-	"experiences": [{
+	"websiteLink": "https://www.nandangrover.com",
+	"websiteText": "nandangrover.com",
+	"phone": "9869365725",
+	"experiences": [
+		{
 			"designation": "Software Developer",
 			"duration": "2015 - Present",
 			"location": "Mumbai",
