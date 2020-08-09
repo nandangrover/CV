@@ -1,5 +1,5 @@
 {
-	"Printing Info": "Print or Save the PDF as A3 instead of A4 to print the whole resume and not just a part of it",
+	"Printing Info": "Print or Save the PDF as Tabloid/A3 instead of A4 to print the whole resume and not just a part of it. Background Graphics should be enabled during Print/Save as Pdf. If the content is too much, then the pdf will inevitably overflow and it won't fit in one page. Try to limit your content or change your paper setting to print appropriately",
 	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText",
 	"STYLE_OPTIONS": "There are 6 style options available: 1,2,3,4,5,6. Select one of them in the key: 'Style Number' to render a different style",
 	"Style Number": "1",
@@ -10,18 +10,66 @@
 	"websiteLink": "https://www.nandangrover.com",
 	"websiteText": "nandangrover.com",
 	"phone": "9869365725",
+	"educationTitle": "EDUCATION",
+	"education": [
+		{
+			"degree": "MSc in Computer Science",
+			"meta": "University of Bharati",
+			"time": "2011 - 2012"
+		},
+		{
+			"degree": "BSc in Applied Mathematics",
+			"meta": "Bristol Vidyapeeth",
+			"time": "2011 - 2012"
+		}
+	],
+	"languageTitle": "LANGUAGES",
+	"languages": {
+		"English": "Professional",
+		"Hindi": "Native"
+	},
+	"interestTitle": "INTERESTS",
+	"interests": [
+		"Climbing",
+		"Cubing",
+		"Running"
+	],
+	"introTitle": "CAREER PROFILE",
+	"careerProfile": "Summarise your career here lorem ipsum dolor sit amet, consectetuer adipiscing elit. You can download this free resume/CV template here. <a target='_blank' href='https://www.nandangrover.com/'>This is custom link</a> dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu. Edit",
+	"experienceTitle": "EXPERIENCES",
 	"experiences": [
 		{
 			"designation": "Software Developer",
 			"duration": "2015 - Present",
-			"location": "Mumbai",
+			"name&location": "Startup Hubs, San Francisco",
 			"description": "Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.\n Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
 		},
 		{
 			"designation": "Software Developer",
 			"duration": "2015 - Present",
-			"location": "Mumbai",
-			"description": "Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.\n Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+			"name&location": "Mitr Learning and Media, Mumbai",
+			"description": "As a developer at MITR I was a part of multiple projects ranging from work in Vanilla JS to latest frontend and backend frameworks. Most of my work was centered for an offshore project for the company Curriculum Associates. <br><strong>Curriculum Associates - Authoring</strong> (VueJS, Python, JavaScript, Typescript, Docker, GraphQL, MySQL, PHP): <ul><li>Project lead for mission critical application which allow users to edit content which is tailored for kids from k-12.</li><li> Delivered a task to make our content filterable through a multitude of custom filters and implement those filters as a set of custom queries and an interactive UI. My work directly saved thousands of dollars by automating things which were previously done manually.</li></ul>"
 		}
-	]
+	],
+	"projectTitle": "PROJECTS",
+	"projectsIntro": "To enhance my skills and hone my craft, I undertook many projects. These projects are open sourced and can be found on my <a href='https://github.com/nandangrover' target='_blank'>github</a>.",
+	"projects": [
+		{
+			"title": "Velocity",
+			"link": "https://www.nandangrover.com",
+			"detail": "A responsive website template designed to help startups promote, market and sell their products."
+		},
+		{
+			"title": "Velocity",
+			"link": "#",
+			"detail": "A responsive website template designed to help startups promote, market and sell their products."
+		}
+	],
+	"skillsTitle": "SKILLS & PROFICIENCY",
+	"skills": {
+		"Python & Django": "79",
+		"Javascript & jQuery": "30",
+		"SQl and Mongo": "100",
+		"Javascript": "81"
+	}
 }

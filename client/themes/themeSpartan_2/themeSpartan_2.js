@@ -55,7 +55,74 @@ class themeSpartan_2 {
       } else {
         website.remove();
       }
+
+      const education = document.getElementsByClassName('education-container')[0];
+      const eduTitle = education.getElementsByTagName('h2')[0];
+      eduTitle.textContent = this.config.educationTitle;
+      this.config.education.forEach((edu, index) => {
+        this.createElement({ className: 'item', id: `eduItem-${index}`, type: 'div', appendTo: 'education-container' });
+        this.createElement({ className: 'degree', html: edu.degree, type: 'h4', appendTo: `eduItem-${index}` });
+        this.createElement({ className: 'meta', html: edu.meta, type: 'h5', appendTo: `eduItem-${index}` });
+        this.createElement({ className: 'time', html: edu.time, appendTo: `eduItem-${index}` });
+      });
      
+      const languages = document.getElementsByClassName('languages-container')[0];
+      const langTitle = languages.getElementsByTagName('h2')[0];
+      langTitle.innerHTML = this.config.languageTitle;
+      Object.keys(this.config.languages).forEach((key, index) => {
+        this.createElement({ id:`langList-${index}`, html: key, type: 'li', appendTo: 'lang-ul' });
+        this.createElement({ className: 'lang-desc', html: ` (${this.config.languages[key]})`, type: 'span', appendTo: `langList-${index}` });
+      });
+
+      const interest = document.getElementsByClassName('interests-container')[0];
+      const interestTitle = interest.getElementsByTagName('h2')[0];
+      interestTitle.innerHTML = this.config.interestTitle;
+      this.config.interests.forEach((key, index) => {
+        this.createElement({ html: key, type: 'li', appendTo: 'interest-ul' });
+      });
+
+      const summary = document.getElementsByClassName('summary-section')[0];
+      const summaryTitle = summary.getElementsByTagName('h2')[0];
+      summaryTitle.innerHTML = this.config.introTitle;
+      const summaryText = summary.getElementsByTagName('div')[0];
+      summaryText.innerHTML = `<p>${this.config.careerProfile}</p>`;
+
+      const experience = document.getElementsByClassName('experiences-section')[0];
+      const experienceTitle = experience.getElementsByTagName('h2')[0];
+      experienceTitle.innerHTML = this.config.experienceTitle;
+      this.config.experiences.forEach((experience, index) => {
+        this.createElement({ className: 'item', id: `expitem-${index}`, type: 'div', appendTo: 'experiences-section' });
+        this.createElement({ className: 'meta', id: `expmeta-${index}`, type: 'div', appendTo: `expitem-${index}` });
+        this.createElement({ className: 'upper-row', id: `upperRow-${index}`, type: 'div', appendTo: `expmeta-${index}` });
+        this.createElement({ className: 'job-title', type: 'h3', html: experience.designation, appendTo: `upperRow-${index}` });
+        this.createElement({ className: 'time', type: 'div', html: experience.duration, appendTo: `upperRow-${index}` });
+        this.createElement({ className: 'company', type: 'div', html: experience['name&location'], appendTo: `expmeta-${index}` });
+        this.createElement({ className: 'details', type: 'div', html: experience.description, appendTo: `expitem-${index}` });
+      });
+
+
+      const projects = document.getElementsByClassName('projects-section')[0];
+      const projectTitle = projects.getElementsByTagName('h2')[0];
+      projectTitle.innerHTML = this.config.projectTitle;
+      const projectIntro = projects.getElementsByClassName('intro')[0];
+      projectIntro.innerHTML = this.config.projectsIntro;
+      this.config.projects.forEach((project, index) => {
+        this.createElement({ className: 'item', id: `projItem-${index}`, type: 'div', appendTo: 'projects-section' });
+        this.createElement({ className: 'project-title', id: `projTitle-${index}`, type: 'span', appendTo: `projItem-${index}` });
+        this.createElement({ type: 'a', appendTo: `projTitle-${index}`, attr: [{ key: 'href', value: project.link }, { key: 'target', value: '_blank' }], html: project.title });
+        this.createElement({ className: 'project-tagline',html: ` - ${project.detail}`, type: 'span', appendTo: `projItem-${index}` });
+      });
+
+      const skills = document.getElementsByClassName('skills-section')[0];
+      const skillTitle = skills.getElementsByTagName('h2')[0];
+      skillTitle.innerHTML = this.config.skillsTitle;
+      Object.keys(this.config.skills).forEach((skill, index) => {
+        this.createElement({ className: 'item', id: `skillItem-${index}`, type: 'div', appendTo: 'skillset' });
+        this.createElement({ className: 'level-title', html: skill, type: 'h3', appendTo: `skillItem-${index}` });
+        this.createElement({ className: 'progress level-bar', id: `progressBar-${index}`, appendTo: `skillItem-${index}` });
+
+        this.createElement({ className: 'progress-bar theme-progress-bar', type: 'div', appendTo: `progressBar-${index}`, attr: [{ key: 'role', value: 'progressbar' }, { key: 'style', value: `width: ${this.config.skills[skill]}%` }, { key: 'aria-valuenow', value: this.config.skills[skill] }, { key: 'aria-valuemin', value: '0' }, { key: 'aria-valuemax', value: '100' }] });
+      });
     }
 
     addCss(fileName) {
