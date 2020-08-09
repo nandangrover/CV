@@ -49,11 +49,29 @@ class themeSpartan_2 {
 
       const website = document.getElementsByClassName('website')[0]
       if (this.config.websiteLink) {
-        const link = website.getElementsByTagName('a')[0];
-        link.innerHTML = this.config.websiteText;
-        link.setAttribute('href', this.config.websiteLink)
+        const weblink = website.getElementsByTagName('a')[0];
+        weblink.innerHTML = this.config.websiteText;
+        weblink.setAttribute('href', this.config.websiteLink)
       } else {
         website.remove();
+      }
+
+      const linkedin = document.getElementsByClassName('linkedin')[0]
+      if (this.config.linkedinLink) {
+        const linkedinlink = linkedin.getElementsByTagName('a')[0];
+        linkedinlink.innerHTML = this.config.linkedinText;
+        linkedinlink.setAttribute('href', this.config.linkedinLink)
+      } else {
+        linkedin.remove();
+      }
+
+      const github = document.getElementsByClassName('github')[0]
+      if (this.config.githubLink) {
+        const githubLink = github.getElementsByTagName('a')[0];
+        githubLink.innerHTML = this.config.githubText;
+        githubLink.setAttribute('href', this.config.githubLink)
+      } else {
+        github.remove();
       }
 
       const education = document.getElementsByClassName('education-container')[0];
