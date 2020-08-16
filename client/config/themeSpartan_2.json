@@ -53,14 +53,14 @@
 		"Basic MF"
 	],
 	"introTitle": "CAREER PROFILE",
-	"careerProfile": "Dynamic and Motivated professional with analytical thinking and passion to learn new technologies. Seeking to work in an organization which can help me in evolving myself by the virtue of new assignments and challenges.",
+	"careerProfile": "Full stack web developer with a passion for learning new technologies. Fast learner, organised, enthusiastic and with good communication skills. Able to join team and start delivering quickly.",
 	"experienceTitle": "EXPERIENCES",
 	"experiences": [
 		{
 			"designation": "Associate Software Engineer",
 			"duration": "10/2018 - Present",
 			"name&location": "Accenture, Pune",
-			"description": "<strong>Client: </strong>Tryg A/S is a Scandinavian insurance company present in Denmark, Norway and Finland. It is second largest provider of insurance services in  Nordic countries and listed on Nasdaq OMX Copenhagen.<br>Accenture is one of the IT partners providing support and enhancement to various shared applications <ul><li>As a developer at Accenture I was part of multiple task ranging from work in Siebel EIM, PL/SQL, Java to ensuring Application support and resolution of the incidents in defined SLA delivering.</li><li>Identifying, validating and refining key business objectives, project scope and critical success factors.</li><li>Planned and executed multiple Automation process through batch scripting where in the human interventions were reduced.</li><li>Actively work along with Business Analyst, Team lead to identify the pain points and area of improvement in the existent product.</li><li>Coordinating with the ETL team and making them understand the Siebel data structure and help them in migrating the data from Starwood application database to TRYG Siebel EIM tables.</li><li>Analyzing the new requirements and ensuring the delivery is done in agree timeframe.</li></ul>"
+			"description": "As a developer at MITR I was a part of multiple projects ranging from work in Vanilla JS to latest frontend and backend frameworks. These projects can be grouped into two broad domains.<b>Curriculum Associates - Lesson Editor (<i>VueJS, JavaScript (ES7), Docker, GraphQL, MySQL, php</i>):</b> As an offshore team lead of 4 people, my job is to build new features, address bugs and issues. Support the team members and help them out in completing their tasks. Attend daily scrum and provide updates to the rest of the team. <b>Vanilla JS and Node (<i>JavaScript, React, jQuery, Canvas, HTML, CSS, Node</i>):</b> These projects included building tools in Node and creating interactive E-Learning materials using javascript and canvas. I got a chance to work on many such projects from companies such as Philips, IKEA, Chevron, Korn Ferry etc."
 		}
 	],
 	"projectTitle": "PROJECTS",
