@@ -1,29 +1,34 @@
 {
 	"Printing Info": "Print or Save the PDF as Tabloid/A3 instead of A4 to print the whole resume and not just a part of it. Background Graphics should be enabled during Print/Save as Pdf. If the content is too much, then the pdf will inevitably overflow and it won't fit in one page. Try to limit your content or change your paper setting to print appropriately",
-	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText, project < link(if you remove the project link it remove the hyperlink) ",
+	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText ",
 	"STYLE_OPTIONS": "There are 6 style options available: 1,2,3,4,5,6. Select one of them in the key: 'Style Number' to render a different style",
-	"Style Number": "1",
+	"Style Number": "6",
 	"name": "Nandan Grover",
 	"profileImage": "https://www.nandangrover.com/assets/images/profile.jpeg",
-	"designation": "Full Stack Developer",
-	"email": "nandangrover.5@gmail.com",
+	"designation": "Software Developer",
+	"email": "singhy096gmail.com",
 	"websiteLink": "https://www.nandangrover.com",
-	"websiteText": "nandangrover.com",
-	"linkedinLink": "https://www.linkedin.com/in/nandan-grover-01152010a",
-	"linkedinText": "linkedin.com/nandangrover",
-	"githubLink": "https://github.com/nandangrover",
-	"githubText": "github.com/nandangrover",
-	"phone": "9869365725",
+	"websiteText": "www.nandangrover.com",
+	"linkedinLink": "https://www.linkedin.com/in/avinas/",
+	"linkedinText": "linkedin.com/avinashsingh",
+	"githubLink": "https://github.com/singhy",
+	"githubText": "github.com/avinashsingh",
+	"phone": "+91-84468722356",
 	"educationTitle": "EDUCATION",
 	"education": [
 		{
-			"degree": "MSc in Computer Science",
-			"meta": "University of Bharati",
-			"time": "2011 - 2012"
+			"degree": "BE - Computer Science",
+			"meta": "MIT Academy of Engineering",
+			"time": "2014 - 2018"
 		},
 		{
-			"degree": "BSc in Applied Mathematics",
-			"meta": "Bristol Vidyapeeth",
+			"degree": "ISC - 12th",
+			"meta": "Jaipuriar School",
+			"time": "2013 - 2014"
+		},
+		{
+			"degree": "ICSE - 10th",
+			"meta": "Ryan International School",
 			"time": "2011 - 2012"
 		}
 	],
@@ -32,48 +37,64 @@
 		"English": "Professional",
 		"Hindi": "Native"
 	},
-	"interestTitle": "INTERESTS",
+	"interestTitle": "Skills",
 	"interests": [
-		"Climbing",
-		"Cubing",
-		"Running"
+		"Siebel EIM",
+		"PL/SQL",
+		"Data Structure",
+		"Java",
+		"Batch Scripting",
+		"Oracle 11g",
+		"TOAD 9.6",
+		"Basic C",
+		"MongoDB",
+		"PostgreSQL",
+		"Siebel Tools 8.1.1.11",
+		"Basic MF"
 	],
 	"introTitle": "CAREER PROFILE",
-	"careerProfile": "Summarise your career here lorem ipsum dolor sit amet, consectetuer adipiscing elit. You can download this free resume/CV template here. <a target='_blank' href='https://www.nandangrover.com/'>This is custom link</a> dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu. Edit",
+	"careerProfile": "Dynamic and Motivated professional with analytical thinking and passion to learn new technologies. Seeking to work in an organization which can help me in evolving myself by the virtue of new assignments and challenges.",
 	"experienceTitle": "EXPERIENCES",
 	"experiences": [
 		{
-			"designation": "Software Developer",
-			"duration": "2015 - Present",
-			"name&location": "Startup Hubs, San Francisco",
-			"description": "Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.\n Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-		},
-		{
-			"designation": "Software Developer",
-			"duration": "2015 - Present",
-			"name&location": "Mitr Learning and Media, Mumbai",
-			"description": "As a developer at MITR I was a part of multiple projects ranging from work in Vanilla JS to latest frontend and backend frameworks. Most of my work was centered for an offshore project for the company Curriculum Associates. <br><strong>Curriculum Associates - Authoring</strong> (VueJS, Python, JavaScript, Typescript, Docker, GraphQL, MySQL, PHP): <ul><li>Project lead for mission critical application which allow users to edit content which is tailored for kids from k-12.</li><li> Delivered a task to make our content filterable through a multitude of custom filters and implement those filters as a set of custom queries and an interactive UI. My work directly saved thousands of dollars by automating things which were previously done manually.</li></ul>"
+			"designation": "Associate Software Engineer",
+			"duration": "10/2018 - Present",
+			"name&location": "Accenture, Pune",
+			"description": "<strong>Client: </strong>Tryg A/S is a Scandinavian insurance company present in Denmark, Norway and Finland. It is second largest provider of insurance services in  Nordic countries and listed on Nasdaq OMX Copenhagen.<br>Accenture is one of the IT partners providing support and enhancement to various shared applications <ul><li>As a developer at Accenture I was part of multiple task ranging from work in Siebel EIM, PL/SQL, Java to ensuring Application support and resolution of the incidents in defined SLA delivering.</li><li>Identifying, validating and refining key business objectives, project scope and critical success factors.</li><li>Planned and executed multiple Automation process through batch scripting where in the human interventions were reduced.</li><li>Actively work along with Business Analyst, Team lead to identify the pain points and area of improvement in the existent product.</li><li>Coordinating with the ETL team and making them understand the Siebel data structure and help them in migrating the data from Starwood application database to TRYG Siebel EIM tables.</li><li>Analyzing the new requirements and ensuring the delivery is done in agree timeframe.</li></ul>"
 		}
 	],
 	"projectTitle": "PROJECTS",
-	"projectsIntro": "To enhance my skills and hone my craft, I undertook many projects. These projects are open sourced and can be found on my <a href='https://github.com/nandangrover' target='_blank'>github</a>.",
+	"projectsIntro": "To enhance my skills and hone my craft, I have undertaken below projects.",
 	"projects": [
 		{
-			"title": "Velocity",
-			"link": "https://www.nandangrover.com",
-			"detail": "A responsive website template designed to help startups promote, market and sell their products."
+			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>",
+			"detail": "Design and develop an UI using OpenStack Horizon service to interact with LXC,  working on OpenStack Magnum project"
 		},
 		{
-			"title": "Velocity",
-			"link": "#",
-			"detail": "A responsive website template designed to help startups promote, market and sell their products."
+			"title": "<strong>Smart India Hackathon 2017- Passenger Security App for Indian Railways</strong>",
+			"detail": "This mobile app for passenger security in Indian Railways qualified for the final rounds of Smart India Hackathon at Udaipur. The system deals with all the aspects of Managing a Crime Report against any FIR lodged by passengers in Indian Railways. Passengers will be able to enter all details about the crimes, including the date and time, place, nature of crime and the location of the crime."
+		},
+		{
+			"title": "<strong>Mobile Application for Connecting Farmers with Retailers</strong>",
+			"detail": "A mobile app that would enable farmers to connect directly to retailers. It will help maximize profits for both parties."
 		}
 	],
-	"skillsTitle": "SKILLS & PROFICIENCY",
-	"skills": {
-		"Python & Django": "79",
-		"Javascript & jQuery": "30",
-		"SQl and Mongo": "100",
-		"Javascript": "81"
-	}
+	"achievementsTtitle": "Achievements and Activities",
+	"achievementsDetail": [
+		{
+			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
+		},
+		{
+			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
+		},
+		{
+			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
+		},
+		{
+			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
+		},
+		{
+			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
+		}
+	]
 }

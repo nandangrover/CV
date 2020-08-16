@@ -101,13 +101,17 @@ class themeSpartan_2 {
 
       const summary = document.getElementsByClassName('summary-section')[0];
       const summaryTitle = summary.getElementsByTagName('h2')[0];
+      let summarySpan = summaryTitle.firstChild;
       summaryTitle.innerHTML = this.config.introTitle;
+      summaryTitle.prepend(summarySpan);
       const summaryText = summary.getElementsByTagName('div')[0];
       summaryText.innerHTML = `<p>${this.config.careerProfile}</p>`;
 
       const experience = document.getElementsByClassName('experiences-section')[0];
       const experienceTitle = experience.getElementsByTagName('h2')[0];
+      let expSpan = experienceTitle.firstChild;
       experienceTitle.innerHTML = this.config.experienceTitle;
+      experienceTitle.prepend(expSpan);
       this.config.experiences.forEach((experience, index) => {
         this.createElement({ className: 'item', id: `expitem-${index}`, type: 'div', appendTo: 'experiences-section' });
         this.createElement({ className: 'meta', id: `expmeta-${index}`, type: 'div', appendTo: `expitem-${index}` });
@@ -121,9 +125,9 @@ class themeSpartan_2 {
 
       const projects = document.getElementsByClassName('projects-section')[0];
       const projectTitle = projects.getElementsByTagName('h2')[0];
+      let projSpan = projectTitle.firstChild;
       projectTitle.innerHTML = this.config.projectTitle;
-      const projectIntro = projects.getElementsByClassName('intro')[0];
-      projectIntro.innerHTML = this.config.projectsIntro;
+      projectTitle.prepend(projSpan);
       this.config.projects.forEach((project, index) => {
         this.createElement({ className: 'item', id: `projItem-${index}`, type: 'div', appendTo: 'projects-section' });
         if (!project.link) {
@@ -136,15 +140,15 @@ class themeSpartan_2 {
         this.createElement({ className: 'project-tagline',html: ` - ${project.detail}`, type: 'span', appendTo: `projItem-${index}` });
       });
 
-      const skills = document.getElementsByClassName('skills-section')[0];
-      const skillTitle = skills.getElementsByTagName('h2')[0];
-      skillTitle.innerHTML = this.config.skillsTitle;
-      Object.keys(this.config.skills).forEach((skill, index) => {
-        this.createElement({ className: 'item', id: `skillItem-${index}`, type: 'div', appendTo: 'skillset' });
-        this.createElement({ className: 'level-title', html: skill, type: 'h3', appendTo: `skillItem-${index}` });
-        this.createElement({ className: 'progress level-bar', id: `progressBar-${index}`, appendTo: `skillItem-${index}` });
-
-        this.createElement({ className: 'progress-bar theme-progress-bar', type: 'div', appendTo: `progressBar-${index}`, attr: [{ key: 'role', value: 'progressbar' }, { key: 'style', value: `width: ${this.config.skills[skill]}%` }, { key: 'aria-valuenow', value: this.config.skills[skill] }, { key: 'aria-valuemin', value: '0' }, { key: 'aria-valuemax', value: '100' }] });
+      const achievements = document.getElementById('achievements-section');
+      const achievementsTitle = achievements.getElementsByTagName('h2')[0];
+      let achieveSpan = achievementsTitle.firstChild;
+      achievementsTitle.innerHTML = this.config.achievementsTtitle;
+      achievementsTitle.prepend(achieveSpan)
+      this.config.achievementsDetail.forEach((achievement, index) => {
+        this.createElement({ className: 'item', id: `achieveItem-${index}`, type: 'div', appendTo: 'achievements-section' });
+        this.createElement({ type: 'span', appendTo: `achieveItem-${index}`,id: `achieveTitle-${index}`, html: achievement.title });
+        this.createElement({ className: 'project-title', type: 'span', appendTo: `achieveTitle-${index}` });
       });
     }
 
