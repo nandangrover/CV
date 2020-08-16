@@ -126,8 +126,13 @@ class themeSpartan_2 {
       projectIntro.innerHTML = this.config.projectsIntro;
       this.config.projects.forEach((project, index) => {
         this.createElement({ className: 'item', id: `projItem-${index}`, type: 'div', appendTo: 'projects-section' });
-        this.createElement({ className: 'project-title', id: `projTitle-${index}`, type: 'span', appendTo: `projItem-${index}` });
-        this.createElement({ type: 'a', appendTo: `projTitle-${index}`, attr: [{ key: 'href', value: project.link }, { key: 'target', value: '_blank' }], html: project.title });
+        if (!project.link) {
+          this.createElement({ className: 'project-title', id: `projTitle-${index}`, type: 'span', appendTo: `projItem-${index}` });
+          this.createElement({ type: 'span', appendTo: `projTitle-${index}`, html: project.title });
+        } else {
+          this.createElement({ className: 'project-title', id: `projTitle-${index}`, type: 'span', appendTo: `projItem-${index}` });
+          this.createElement({ type: 'a', appendTo: `projTitle-${index}`, attr: [{ key: 'href', value: project.link }, { key: 'target', value: '_blank' }], html: project.title });
+        }
         this.createElement({ className: 'project-tagline',html: ` - ${project.detail}`, type: 'span', appendTo: `projItem-${index}` });
       });
 

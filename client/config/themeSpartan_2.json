@@ -1,6 +1,6 @@
 {
 	"Printing Info": "Print or Save the PDF as Tabloid/A3 instead of A4 to print the whole resume and not just a part of it. Background Graphics should be enabled during Print/Save as Pdf. If the content is too much, then the pdf will inevitably overflow and it won't fit in one page. Try to limit your content or change your paper setting to print appropriately",
-	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText ",
+	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText, project < link(if you remove the project link it remove the hyperlink) ",
 	"STYLE_OPTIONS": "There are 6 style options available: 1,2,3,4,5,6. Select one of them in the key: 'Style Number' to render a different style",
 	"Style Number": "1",
 	"name": "Nandan Grover",
