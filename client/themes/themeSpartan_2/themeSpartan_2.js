@@ -141,15 +141,20 @@ class themeSpartan_2 {
       });
 
       const achievements = document.getElementById('achievements-section');
-      const achievementsTitle = achievements.getElementsByTagName('h2')[0];
-      let achieveSpan = achievementsTitle.firstChild;
-      achievementsTitle.innerHTML = this.config.achievementsTtitle;
-      achievementsTitle.prepend(achieveSpan)
-      this.config.achievementsDetail.forEach((achievement, index) => {
-        this.createElement({ className: 'item', id: `achieveItem-${index}`, type: 'div', appendTo: 'achievements-section' });
-        this.createElement({ type: 'span', appendTo: `achieveItem-${index}`,id: `achieveTitle-${index}`, html: achievement.title });
-        this.createElement({ className: 'project-title', type: 'span', appendTo: `achieveTitle-${index}` });
-      });
+
+      if (this.config.achievementsTtitle) {
+        const achievementsTitle = achievements.getElementsByTagName('h2')[0];
+        let achieveSpan = achievementsTitle.firstChild;
+        achievementsTitle.innerHTML = this.config.achievementsTtitle;
+        achievementsTitle.prepend(achieveSpan)
+        this.config.achievementsDetail.forEach((achievement, index) => {
+          this.createElement({ className: 'item', id: `achieveItem-${index}`, type: 'div', appendTo: 'achievements-section' });
+          this.createElement({ type: 'span', appendTo: `achieveItem-${index}`,id: `achieveTitle-${index}`, html: achievement.title });
+          this.createElement({ className: 'project-title', type: 'span', appendTo: `achieveTitle-${index}` });
+        });
+      } else {
+        achievements.remove()
+      }
     }
 
     addCss(fileName) {

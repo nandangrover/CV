@@ -3,11 +3,10 @@ import gateway from '../utility/gateways.js';
 
 (async () => {
   document.body.removeChild(document.getElementById('main'));
-  window['themeElon_1'] = JSON.parse((await gateway.getJson('AwesomeGrover'))[0].jsonData);
+  window['themeSpartan_2'] = JSON.parse((await gateway.getJson('Nandan', 'themeSpartan_2'))[0].jsonData);
   let iFrame = document.getElementById("template");
-  iFrame.src = `../themes/themeElon_1/index.html`;
+  iFrame.src = `../themes/themeSpartan_2/index.html`;
   iFrame.style.display = 'block';
-  console.log(window.location.pathname)
   if (window.location.pathname === '/download') {
     iFrame.onload = function () {
       window.document.getElementById("print").click()
