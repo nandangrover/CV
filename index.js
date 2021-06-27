@@ -1,13 +1,15 @@
 const express = require('express');
 const path = require("path");
 const mongoose = require('mongoose');
-const bodyParser = require("body-parser");
 const dataBlob = require("./server/routes/dataBlob");
 const config = require('./config');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
 
 // Allow cross origin request
 // app.use(cors());
