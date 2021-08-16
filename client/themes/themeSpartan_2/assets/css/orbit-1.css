@@ -153,15 +153,15 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.sidebar-wrapper .languages-list {
+.sidebar-wrapper .languages-list .awards-list {
   margin-bottom: 0;
 }
 
-.sidebar-wrapper .languages-list li {
+.sidebar-wrapper .languages-list .awards-list li {
   margin-bottom: 10px;
 }
 
-.sidebar-wrapper .languages-list li:last-child {
+.sidebar-wrapper .languages-list .awards-list li:last-child {
   margin-bottom: 0;
 }
 

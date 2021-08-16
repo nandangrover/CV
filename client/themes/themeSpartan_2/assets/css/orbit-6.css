@@ -26,7 +26,7 @@ a {
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
-  text-decoration: none !important;
+  /* text-decoration: none !important; */
 }
 
 a:hover {
@@ -110,7 +110,7 @@ p {
 }
 
 .sidebar-wrapper .container-block {
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .sidebar-wrapper .container-block-title {
@@ -153,15 +153,15 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.sidebar-wrapper .languages-list {
+.sidebar-wrapper .languages-list .awards-list {
   margin-bottom: 0;
 }
 
-.sidebar-wrapper .languages-list li {
+.sidebar-wrapper .languages-list .awards-list li {
   margin-bottom: 5px;
 }
 
-.sidebar-wrapper .languages-list li:last-child {
+.sidebar-wrapper .languages-list .awards-list li:last-child {
   margin-bottom: 0;
 }
 
