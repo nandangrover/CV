@@ -2,99 +2,99 @@
 	"Printing Info": "Print or Save the PDF as Tabloid/A3 instead of A4 to print the whole resume and not just a part of it. Background Graphics should be enabled during Print/Save as Pdf. If the content is too much, then the pdf will inevitably overflow and it won't fit in one page. Try to limit your content or change your paper setting to print appropriately",
 	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText ",
 	"STYLE_OPTIONS": "There are 6 style options available: 1,2,3,4,5,6. Select one of them in the key: 'Style Number' to render a different style",
-	"Style Number": "6",
+	"Style Number": "1",
 	"name": "Nandan Grover",
 	"profileImage": "https://www.nandangrover.com/assets/images/profile.jpeg",
-	"designation": "Software Developer",
-	"email": "singhy096gmail.com",
+	"designation": "Research and Development Engineer",
+	"email": "nandangrover.5@gmail.com",
 	"websiteLink": "https://www.nandangrover.com",
 	"websiteText": "www.nandangrover.com",
-	"linkedinLink": "https://www.linkedin.com/in/avinas/",
-	"linkedinText": "linkedin.com/avinashsingh",
-	"githubLink": "https://github.com/singhy",
-	"githubText": "github.com/avinashsingh",
-	"phone": "+91-84468722356",
+	"linkedinLink": "https://www.linkedin.com/in/nandan-grover-01152010a",
+	"linkedinText": "linkedin.com/nandangrover",
+	"githubLink": "https://github.com/nandangrover",
+	"githubText": "github.com/nandangrover",
+	"phone": "+91-9869365725",
 	"educationTitle": "EDUCATION",
 	"education": [
 		{
 			"degree": "BE - Computer Science",
-			"meta": "MIT Academy of Engineering",
+			"meta": "Bharati Vidyapeeth College of Engineering",
 			"time": "2014 - 2018"
-		},
-		{
-			"degree": "ISC - 12th",
-			"meta": "Jaipuriar School",
-			"time": "2013 - 2014"
-		},
-		{
-			"degree": "ICSE - 10th",
-			"meta": "Ryan International School",
-			"time": "2011 - 2012"
 		}
 	],
-	"languageTitle": "LANGUAGES",
+	"languageTitle": "SKILLS",
 	"languages": {
-		"English": "Professional",
-		"Hindi": "Native"
+		"Golang": "Expert",
+		"Javascript & Typescript": "Expert",
+		"Ruby": "Expert",
+		"Vue & React": "Expert",
+		"HTML5, CSS3 & SASS": "Expert",
+		"Node": "Intermediate",
+		"C++": "Intermediate",
+		"Python": "Intermediate",
+		"Ruby on Rails": "Intermediate",
+		"MongoDB & Mysql": "Intermediate",
+		"PHP": "Novice",
+		"Docker": "Novice"
 	},
-	"interestTitle": "Skills",
-	"interests": [
-		"Siebel EIM",
-		"PL/SQL",
-		"Data Structure",
-		"Java",
-		"Batch Scripting",
-		"Oracle 11g",
-		"TOAD 9.6",
-		"Basic C",
-		"MongoDB",
-		"PostgreSQL",
-		"Siebel Tools 8.1.1.11",
-		"Basic MF"
+	"interestTitleDraft": "INTERESTS",
+	"interestsDraft": [
+		"Running",
+		"Blockchain",
+		"Rubik's cube"
+	],
+	"researchTitle": "RESEARCH ACHIEVEMENTS",
+	"research": [
+		"<a href='https://www.grdjournals.com/article?paper_id=GRDJEV03I050113'>GRD Journals</a> - Automatic License Plate Recognition System (2018)"
+	],
+	"awardsTitle": "HONOURS/AWARDS",
+	"awards": [
+		"<a href='https://www.medidata.com/en/'>MEDIDATA</a> - (Nominated) Heroic Encore Award for Architecting Autoscaling gem (2021)",
+		"<a href='https://www.3ds.com/'>DASSAULT SYSTÈMES</a> - (Won) Genius Award for Architecting Autoscaling gem (2021)"
 	],
 	"introTitle": "CAREER PROFILE",
-	"careerProfile": "Full stack web developer with a passion for learning new technologies. Fast learner, organised, enthusiastic and with good communication skills. Able to join team and start delivering quickly.",
-	"experienceTitle": "EXPERIENCES",
+	"careerProfile": "Experienced industry professional with personal insight into the infrastructure level coding practices and a passion for learning new technologies. Fast learner, organised, enthusiastic and with good communication skills. Able to join team and start delivering quickly.",
+	"experienceTitle": "PROFESSIONAL EXPERIENCE",
 	"experiences": [
 		{
-			"designation": "Associate Software Engineer",
-			"duration": "10/2018 - Present",
-			"name&location": "Accenture, Pune",
-			"description": "As a developer at MITR I was a part of multiple projects ranging from work in Vanilla JS to latest frontend and backend frameworks. These projects can be grouped into two broad domains.<b>Curriculum Associates - Lesson Editor (<i>VueJS, JavaScript (ES7), Docker, GraphQL, MySQL, php</i>):</b> As an offshore team lead of 4 people, my job is to build new features, address bugs and issues. Support the team members and help them out in completing their tasks. Attend daily scrum and provide updates to the rest of the team. <b>Vanilla JS and Node (<i>JavaScript, React, jQuery, Canvas, HTML, CSS, Node</i>):</b> These projects included building tools in Node and creating interactive E-Learning materials using javascript and canvas. I got a chance to work on many such projects from companies such as Philips, IKEA, Chevron, Korn Ferry etc."
+			"designation": "Research and Development Engineer",
+			"duration": "10/2020 - Present",
+			"name&location": "Dassault Systèmes, Pune",
+			"description": "<li>Leading a team of 10 in developing a System for Cross-domain Identity Management (SCIM)</li><li>Created a uniform approach for autoscaling across services that allows additional considerations, such as CPU usage and throttling times to be factored into autoscaling.</li><li>Successfully reduced the CI/CD build time for multiple services by optimizing code and strategically adding nodes.</li>"
+		},
+		{
+			"designation": "Software Developer and Team Lead",
+			"duration": "06/2018 - 10/2020",
+			"name&location": "MITR Learning and Media, Mumbai",
+			"description": "<li>Project lead for mission critical application which allow users to edit content which is tailored for kids from K-12.</li><li>Delivered a task to make our content filterable through a multitude of custom filters and implement those filters as a set of custom queries and an interactive UI.</li><li>Point person for a collaborative project with Curriculum Associates, a Boston based E-Learning company.</li>"
+		},
+		{
+			"designation": "Cybersecurity Intern",
+			"duration": "06/2017 - 07/2017",
+			"name&location": "Reliance Industries Limited, Mumbai",
+			"description": "<li>Researched and help test Mokescreen (Deception technology) to prevent data theft.</li>"
+		},
+		{
+			"designation": "Strategic Solution Intern",
+			"duration": "06/2016 - 07/2016",
+			"name&location": "Datamatics Global Services Limited, Mumbai",
+			"description": "<li>As a project trainee in Strategic Solutions Group, my responsibilities included researching ways Datamatics could integrate itself into the BPM landscape in India.</li>"
 		}
 	],
-	"projectTitle": "PROJECTS",
+	"projectTitle": "Sofware Projects",
 	"projectsIntro": "To enhance my skills and hone my craft, I have undertaken below projects.",
 	"projects": [
 		{
-			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>",
-			"detail": "Design and develop an UI using OpenStack Horizon service to interact with LXC,  working on OpenStack Magnum project"
+			"title": "<strong>Microservices using Go</strong>",
+			"detail": "Created an educational blog and project to help others build scalable microservices using Go.<br><a href='https://medium.com/swlh/creating-microservices-with-go-part-1-2f9aff360db5'>medium.com/swlh/creating-microservices-with-go</a>"
 		},
 		{
-			"title": "<strong>Smart India Hackathon 2017- Passenger Security App for Indian Railways</strong>",
-			"detail": "This mobile app for passenger security in Indian Railways qualified for the final rounds of Smart India Hackathon at Udaipur. The system deals with all the aspects of Managing a Crime Report against any FIR lodged by passengers in Indian Railways. Passengers will be able to enter all details about the crimes, including the date and time, place, nature of crime and the location of the crime."
+			"title": "<strong>JIRA Active Tickets Helper</strong>",
+			"detail": "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on.<br><a href='https://github.com/nandangrover/Jira-Active-Tickets-Helper'>github.com/nandangrover/Jira-Active-Tickets-Helper</a>"
 		},
 		{
-			"title": "<strong>Mobile Application for Connecting Farmers with Retailers</strong>",
-			"detail": "A mobile app that would enable farmers to connect directly to retailers. It will help maximize profits for both parties."
-		}
-	],
-	"achievementsTtitle": "Achievements and Activities",
-	"achievementsDetail": [
-		{
-			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
-		},
-		{
-			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
-		},
-		{
-			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
-		},
-		{
-			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
-		},
-		{
-			"title": "<strong>User Interface To Manage Web Services Using Linux Containers(LXC)</strong>"
+			"title": "<strong>Social Network using React and Socket.io</strong>",
+			"detail": "Chat Application with group chat and one to one chat capability by forming secure private rooms.<br><a href='https://github.com/nandangrover/Social-Network-Node'>github.com/nandangrover/Social-Network-Node</a>"
 		}
 	]
 }
