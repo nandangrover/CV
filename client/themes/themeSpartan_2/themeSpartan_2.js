@@ -46,7 +46,8 @@ class themeSpartan_2 {
     const designation = document.getElementsByClassName("tagline")[0];
     designation.innerHTML = this.config.designation;
 
-    const contactContainer = document.getElementsByClassName("contact-container")[0];
+    const contactContainer =
+      document.getElementsByClassName("contact-container")[0];
     contactContainer.style.paddingTop = "20px";
 
     const phone = document
@@ -87,6 +88,18 @@ class themeSpartan_2 {
     } else {
       github.remove();
     }
+
+     const body = document.body;
+
+     if (this.config.leftSidebarFontSize) {
+      body.style.fontSize = this.config.leftSidebarFontSize;
+     }
+
+     const mainWrapper = document.getElementsByClassName("main-wrapper")[0];;
+
+     if (this.config.rightSidebarFontSize) {
+      mainWrapper.style.fontSize = this.config.rightSidebarFontSize;
+     }
 
     const education = document.getElementsByClassName("education-container")[0];
     education.style.paddingBottom = "35px";
@@ -242,53 +255,55 @@ class themeSpartan_2 {
     });
 
     const projects = document.getElementsByClassName("projects-section")[0];
-    const projectTitle = projects.getElementsByTagName("h2")[0];
-    let projSpan = projectTitle.firstChild;
-    projectTitle.innerHTML = this.config.projectTitle;
-    projectTitle.prepend(projSpan);
-    this.config.projects.forEach((project, index) => {
-      this.createElement({
-        className: "item",
-        id: `projItem-${index}`,
-        type: "div",
-        appendTo: "projects-section",
-      });
-      if (!project.link) {
+    if (this.config.projectTitle) {
+      const projectTitle = projects.getElementsByTagName("h2")[0];
+      let projSpan = projectTitle.firstChild;
+      projectTitle.innerHTML = this.config.projectTitle;
+      projectTitle.prepend(projSpan);
+      this.config.projects.forEach((project, index) => {
         this.createElement({
-          className: "project-title",
-          id: `projTitle-${index}`,
+          className: "item",
+          id: `projItem-${index}`,
+          type: "div",
+          appendTo: "projects-section",
+        });
+        if (!project.link) {
+          this.createElement({
+            className: "project-title",
+            id: `projTitle-${index}`,
+            type: "span",
+            appendTo: `projItem-${index}`,
+          });
+          this.createElement({
+            type: "span",
+            appendTo: `projTitle-${index}`,
+            html: project.title,
+          });
+        } else {
+          this.createElement({
+            className: "project-title",
+            id: `projTitle-${index}`,
+            type: "span",
+            appendTo: `projItem-${index}`,
+          });
+          this.createElement({
+            type: "a",
+            appendTo: `projTitle-${index}`,
+            attr: [
+              { key: "href", value: project.link },
+              { key: "target", value: "_blank" },
+            ],
+            html: project.title,
+          });
+        }
+        this.createElement({
+          className: "project-tagline",
+          html: ` - ${project.detail}`,
           type: "span",
           appendTo: `projItem-${index}`,
         });
-        this.createElement({
-          type: "span",
-          appendTo: `projTitle-${index}`,
-          html: project.title,
-        });
-      } else {
-        this.createElement({
-          className: "project-title",
-          id: `projTitle-${index}`,
-          type: "span",
-          appendTo: `projItem-${index}`,
-        });
-        this.createElement({
-          type: "a",
-          appendTo: `projTitle-${index}`,
-          attr: [
-            { key: "href", value: project.link },
-            { key: "target", value: "_blank" },
-          ],
-          html: project.title,
-        });
-      }
-      this.createElement({
-        className: "project-tagline",
-        html: ` - ${project.detail}`,
-        type: "span",
-        appendTo: `projItem-${index}`,
       });
-    });
+    }
 
     const achievements = document.getElementById("achievements-section");
 
