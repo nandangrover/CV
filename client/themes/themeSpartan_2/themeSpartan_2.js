@@ -303,6 +303,8 @@ class themeSpartan_2 {
           appendTo: `projItem-${index}`,
         });
       });
+    } else {
+      projects.remove();
     }
 
     const achievements = document.getElementById("achievements-section");
