@@ -1,11 +1,14 @@
 {
 	"Printing Info": "Print or Save the PDF as Tabloid/A3 instead of A4 to print the whole resume and not just a part of it. Background Graphics should be enabled during Print/Save as Pdf. If the content is too much, then the pdf will inevitably overflow and it won't fit in one page. Try to limit your content or change your paper setting to print appropriately",
-	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText ",
+	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText, Projects Section, Research Achivements, Honours/Awards,  ",
 	"STYLE_OPTIONS": "There are 6 style options available: 1,2,3,4,5,6. Select one of them in the key: 'Style Number' to render a different style",
-	"Style Number": "1",
+	"rightSidebarFontSize": "13px",
+	"leftSidebarFontSize": "12px",
+	"sectionTitle": "14px",
+	"Style Number": "6",
 	"name": "Nandan Grover",
 	"profileImage": "https://www.nandangrover.com/assets/images/profile.jpeg",
-	"designation": "Research and Development Engineer",
+	"designation": "Graduate Student in University Of Aberdeen",
 	"email": "nandangrover.5@gmail.com",
 	"websiteLink": "https://www.nandangrover.com",
 	"websiteText": "www.nandangrover.com",
@@ -13,9 +16,14 @@
 	"linkedinText": "linkedin.com/nandangrover",
 	"githubLink": "https://github.com/nandangrover",
 	"githubText": "github.com/nandangrover",
-	"phone": "+91-9869365725",
+	"phone": "+44-7776651069",
 	"educationTitle": "EDUCATION",
 	"education": [
+		{
+			"degree": "Masters in Artificial Intelligence",
+			"meta": "University Of Aberdeen",
+			"time": "2022 - 2023"
+		},
 		{
 			"degree": "BE - Computer Science",
 			"meta": "Bharati Vidyapeeth College of Engineering",
@@ -24,43 +32,32 @@
 	],
 	"languageTitle": "SKILLS",
 	"languages": {
-		"Golang": "Expert",
-		"Javascript & Typescript": "Expert",
-		"Ruby": "Expert",
-		"Vue & React": "Expert",
-		"HTML5, CSS3 & SASS": "Expert",
-		"Node": "Intermediate",
-		"C++": "Intermediate",
-		"Python": "Intermediate",
-		"Ruby on Rails": "Intermediate",
-		"MongoDB & Mysql": "Intermediate",
-		"PHP": "Novice",
-		"Docker": "Novice"
+		"Programming": "GO, Java, Python, PHP, Javascript, Ruby & Typescript",
+		"Frameworks": "React, Vue, Node, Electron & Ruby on Rails",
+		"Python": "Fast Api, Flask, Numpy, Pandas & MatplotLib",
+		"Machine Learning/AI": "Tensorflow, Keras, Pytorch, scikit-learn, Tensorboard & Mlflow",
+		"Development Tools": "Docker, Github, Gulp, Jenkins, Eclipse, Jupyter Notebooks, Visual Studio and Pycharm",
+		"Databases": "MongoDB & Mysql",
+		"Cloud services": "AWS, Google cloud and Heroku"
 	},
-	"interestTitleDraft": "INTERESTS",
-	"interestsDraft": [
-		"Running",
-		"Blockchain",
-		"Rubik's cube"
-	],
 	"researchTitle": "RESEARCH ACHIEVEMENTS",
 	"research": [
 		"<a href='https://www.grdjournals.com/article?paper_id=GRDJEV03I050113'>GRD Journals</a> - Automatic License Plate Recognition System (2018)"
 	],
 	"awardsTitle": "HONOURS/AWARDS",
 	"awards": [
-		"<a href='https://www.medidata.com/en/'>MEDIDATA</a> - (Nominated) Heroic Encore Award for Architecting Autoscaling gem (2021)",
-		"<a href='https://www.3ds.com/'>DASSAULT SYSTÈMES</a> - (Won) Genius Award for Architecting Autoscaling gem (2021)"
+		"<a href='https://www.medidata.com/en/'>MEDIDATA</a> - Heroic Encore Award for Architecting Autoscaling gem (2021)",
+		"<a href='https://www.3ds.com/'>DASSAULT SYSTÈMES</a> - Genius Award for Architecting Autoscaling gem (2021)"
 	],
 	"introTitle": "CAREER PROFILE",
-	"careerProfile": "Experienced industry professional with personal insight into the infrastructure level coding practices and a passion for learning new technologies. Fast learner, organised, enthusiastic and with good communication skills. Able to join team and start delivering quickly.",
+	"careerProfile": "Graduate student studying Artificial Intelligence from the University of Aberdeen with 4 years of work experience as a software developer in a leading IT firm with technical, interpersonal, and management skills in an agile framework. Along with 1 years experience in Machine learning and Deep learning with proven success in building successful algorithms and predictive models for the healthcare industry (NLP). Passionate engineer and thriving analyst with the ability to apply AI/ML techniques & algorithm development to solve real-world industry problems.",
 	"experienceTitle": "PROFESSIONAL EXPERIENCE",
 	"experiences": [
 		{
-			"designation": "Research and Development Engineer",
-			"duration": "10/2020 - Present",
+			"designation": "R&D Engineer and Team Lead",
+			"duration": "10/2020 - 12/2021",
 			"name&location": "Dassault Systèmes, Pune",
-			"description": "<li>Leading a team of 10 in developing a System for Cross-domain Identity Management (SCIM)</li><li>Created a uniform approach for autoscaling across services that allows additional considerations, such as CPU usage and throttling times to be factored into autoscaling.</li><li>Successfully reduced the CI/CD build time for multiple services by optimizing code and strategically adding nodes.</li>"
+			"description": "<li>Researched various ways of implementing a Machine Learning model to handle the healthcare data and integrate it to generate the abstractive summarization of patient history.</li><li>Lead a team of 10 in developing a System for Cross-domain Identity Management (SCIM)</li><li>Created a uniform approach for autoscaling across services that allows additional considerations, such as CPU usage and throttling times to be factored into autoscaling.</li><li>Successfully reduced the CI/CD build time for multiple services by optimizing code and strategically adding nodes.</li>"
 		},
 		{
 			"designation": "Software Developer and Team Lead",
@@ -81,20 +78,24 @@
 			"description": "<li>As a project trainee in Strategic Solutions Group, my responsibilities included researching ways Datamatics could integrate itself into the BPM landscape in India.</li>"
 		}
 	],
-	"projectTitle": "Sofware Projects",
+	"projectTitle": "Projects Highlight",
 	"projectsIntro": "To enhance my skills and hone my craft, I have undertaken below projects.",
 	"projects": [
 		{
+			"title": "<strong>Natural Language Generation for Crypotcurrency",
+			"detail": "Created a NLG system that can be used to generate natural language summary and recommendation for cryptocurrencies based on JSON data.<br><a href='https://crypto-nlg.herokuapp.com/'>crypto-nlg.herokuapp.com</a>"
+		},
+		{
 			"title": "<strong>Microservices using Go</strong>",
-			"detail": "Created an educational blog and project to help others build scalable microservices using Go.<br><a href='https://medium.com/swlh/creating-microservices-with-go-part-1-2f9aff360db5'>medium.com/swlh/creating-microservices-with-go</a>"
+			"detail": "Educational blog and project to help others build scalable microservices using Go.<br><a href='https://medium.com/swlh/creating-microservices-with-go-part-1-2f9aff360db5'>medium.com/swlh/creating-microservices-with-go</a>"
 		},
 		{
-			"title": "<strong>JIRA Active Tickets Helper</strong>",
-			"detail": "Build this chrome extension to assist my team members in getting greater insight into the JIRA tickets they are currently working on.<br><a href='https://github.com/nandangrover/Jira-Active-Tickets-Helper'>github.com/nandangrover/Jira-Active-Tickets-Helper</a>"
+			"title": "<strong>Domestic Robot in JASON</strong>",
+			"detail": "Multiagent system with a cleaning robot, house robot, and a concierge robot in JASON programming language along with it's GUI environment in Java.<br><a href='https://github.com/nandangrover/domestic-robot-jason'>github.com/nandangrover/domestic-robot-jason</a>"
 		},
 		{
-			"title": "<strong>Social Network using React and Socket.io</strong>",
-			"detail": "Chat Application with group chat and one to one chat capability by forming secure private rooms.<br><a href='https://github.com/nandangrover/Social-Network-Node'>github.com/nandangrover/Social-Network-Node</a>"
+			"title": "<strong>Self Driving Car</strong>",
+			"detail": "Implemented concepts of Deep Q-Learning and Machine Learning to build a self driving car.<br><a href='https://github.com/nandangrover/self_driving_car'>github.com/nandangrover/self_driving_car</a>"
 		}
 	]
 }
