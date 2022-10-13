@@ -180,9 +180,10 @@ p {
 .main-wrapper {
   background: #fff;
   padding: 60px;
-  /* padding-right: 300px; */
+  padding-top: 40px;
   font-size: 16px;
   padding-left: 280px;
+  padding-bottom: 1px;
 }
 
 .main-wrapper .section-title {

@@ -40,9 +40,6 @@ class themeSpartan_2 {
     const name = document.getElementsByClassName("name")[0];
     name.innerHTML = this.config.name;
 
-    const profileImg = document.getElementsByClassName("profile")[0];
-    profileImg.setAttribute("src", this.config.profileImage);
-
     const designation = document.getElementsByClassName("tagline")[0];
     designation.innerHTML = this.config.designation;
 
