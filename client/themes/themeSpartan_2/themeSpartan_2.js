@@ -175,7 +175,7 @@ class themeSpartan_2 {
     }
 
     const research = document.getElementsByClassName("research-container")[0];
-    if (this.config.awards) {
+    if (this.config.research) {
       const researchTitle = research.getElementsByTagName("h2")[0];
       researchTitle.innerHTML = this.config.researchTitle;
       this.config.research.forEach((key, index) => {
