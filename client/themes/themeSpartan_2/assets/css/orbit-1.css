@@ -173,6 +173,13 @@ p {
   margin-bottom: 10px;
 }
 
+ul.list-unstyled li {
+  display: grid;
+  grid-template-columns: 12% 75%;
+  align-items: center;
+  justify-content: start;
+}
+
 .sidebar-wrapper .interests-list li:last-child {
   margin-bottom: 0;
 }

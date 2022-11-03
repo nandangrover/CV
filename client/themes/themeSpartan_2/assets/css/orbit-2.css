@@ -51,6 +51,13 @@ p {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+ul.list-unstyled li {
+  display: grid;
+  grid-template-columns: 12% 75%;
+  align-items: center;
+  justify-content: start;
+}
+
 .sidebar-wrapper {
   background: #4CAC9D;
   position: absolute;

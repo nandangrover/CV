@@ -177,6 +177,13 @@ p {
   margin-bottom: 0;
 }
 
+ul.list-unstyled li {
+  display: grid;
+  grid-template-columns: 12% 75%;
+  align-items: center;
+  justify-content: start;
+}
+
 .main-wrapper {
   background: #fff;
   padding: 60px;

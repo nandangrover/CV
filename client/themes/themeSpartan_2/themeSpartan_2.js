@@ -86,6 +86,15 @@ class themeSpartan_2 {
       github.remove();
     }
 
+    const medium = document.getElementsByClassName("medium")[0];
+    if (this.config.mediumLink) {
+      const mediumLink = medium.getElementsByTagName("a")[0];
+      mediumLink.innerHTML = this.config.mediumText;
+      mediumLink.setAttribute("href", this.config.mediumLink);
+    } else {
+      medium.remove();
+    }
+
      const body = document.body;
 
      if (this.config.leftSidebarFontSize) {
@@ -174,6 +183,7 @@ class themeSpartan_2 {
       awards.remove();
     }
 
+    // updated
     const research = document.getElementsByClassName("research-container")[0];
     if (this.config.research) {
       const researchTitle = research.getElementsByTagName("h2")[0];
