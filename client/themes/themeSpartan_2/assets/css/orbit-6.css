@@ -177,7 +177,7 @@ p {
   margin-bottom: 0;
 }
 
-ul.list-unstyled li {
+.contact-socials {
   display: grid;
   grid-template-columns: 12% 75%;
   align-items: center;

@@ -51,7 +51,7 @@ p {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-ul.list-unstyled li {
+.contact-socials {
   display: grid;
   grid-template-columns: 12% 75%;
   align-items: center;
