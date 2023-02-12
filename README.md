@@ -1,5 +1,5 @@
 
-<h1 align="center"><a href="https://nandangrover.herokuapp.com/">CV</a></h1>
+<h1 align="center"><a href="https://www.resume.nandangrover.com/">CV</a></h1>
 
 A Sample HTML and JSON template to build your CV
 
