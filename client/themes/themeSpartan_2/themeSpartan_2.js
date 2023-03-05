@@ -95,17 +95,25 @@ class themeSpartan_2 {
       medium.remove();
     }
 
-     const body = document.body;
+    const body = document.body;
 
-     if (this.config.leftSidebarFontSize) {
+    if (this.config.leftSidebarFontSize) {
       body.style.fontSize = this.config.leftSidebarFontSize;
-     }
+    }
 
-     const mainWrapper = document.getElementsByClassName("main-wrapper")[0];;
+    const mainWrapper = document.getElementsByClassName("main-wrapper")[0];
 
-     if (this.config.rightSidebarFontSize) {
+    if (this.config.rightSidebarFontSize) {
       mainWrapper.style.fontSize = this.config.rightSidebarFontSize;
-     }
+    }
+
+    if (this.config.marginBottomSection) {
+      let nodes = document.querySelectorAll(".main-wrapper .section");
+
+      nodes.forEach((node) => {
+        node.style.marginBottom = this.config.marginBottomSection;
+      });
+    }
 
     const education = document.getElementsByClassName("education-container")[0];
     education.style.paddingBottom = "35px";

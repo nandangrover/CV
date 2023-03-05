@@ -2,13 +2,14 @@
 	"Printing Info": "Print or Save the PDF as Tabloid/A3 instead of A4 to print the whole resume and not just a part of it. Background Graphics should be enabled during Print/Save as Pdf. If the content is too much, then the pdf will inevitably overflow and it won't fit in one page. Try to limit your content or change your paper setting to print appropriately",
 	"OPTIONAL_FIELDS": "Remove the key of these fields and they won't be rendered in the CV: websiteLink,websiteText, linkedinLink,linkedinText, githubLink, githubText, Projects Section, Research Achivements, Honours/Awards,  ",
 	"STYLE_OPTIONS": "There are 6 style options available: 1,2,3,4,5,6. Select one of them in the key: 'Style Number' to render a different style",
-	"rightSidebarFontSize": "13px",
-	"leftSidebarFontSize": "12px",
+	"rightSidebarFontSize": "12px",
+	"leftSidebarFontSize": "14px",
+	"marginBottomSection": "30px",
 	"sectionTitle": "14px",
 	"Style Number": "6",
 	"name": "Nandan Grover",
 	"profileImage": "https://www.nandangrover.com/assets/images/profile.jpeg",
-	"designation": "Graduate Student in University Of Aberdeen",
+	"designation": "Founding Software Engineer",
 	"email": "nandangrover.5@gmail.com",
 	"websiteLink": "https://www.nandangrover.com",
 	"websiteText": "www.nandangrover.com",
@@ -16,6 +17,8 @@
 	"linkedinText": "linkedin.com/nandangrover",
 	"githubLink": "https://github.com/nandangrover",
 	"githubText": "github.com/nandangrover",
+	"mediumLink": "https://medium.com/@nandangrover",
+	"mediumText": "medium.com/@nandangrover",
 	"phone": "+44-7776651069",
 	"educationTitle": "EDUCATION",
 	"education": [
@@ -32,70 +35,72 @@
 	],
 	"languageTitle": "SKILLS",
 	"languages": {
-		"Programming": "GO, Java, Python, PHP, Javascript, Ruby & Typescript",
-		"Frameworks": "React, Vue, Node, Electron & Ruby on Rails",
+		"Programming": "GO, Java, Python, PHP, JavaScript, Ruby, HTML5, CSS, Prolog & Typescript",
+		"Frameworks": "React.js, Vue, Node, Electron & Ruby on Rails, Node.js, jQuery",
 		"Python": "Fast Api, Flask, Numpy, Pandas & MatplotLib",
-		"Machine Learning/AI": "Tensorflow, Keras, Pytorch, scikit-learn, Tensorboard & Mlflow",
-		"Development Tools": "Docker, Github, Gulp, Jenkins, Eclipse, Jupyter Notebooks, Visual Studio and Pycharm",
-		"Databases": "MongoDB & Mysql",
-		"Cloud services": "AWS, Google cloud and Heroku"
+		"Machine Learning/AI": "fastai, TensorFlow, Keras, Pytorch, scikit-learn, Tensorboard & Mlflow, Deep Learning, Computer Vision",
+		"Development Tools": "Docker, Git, Jenkins, Eclipse, Jupyter Notebooks, Visual Studio and Pycharm",
+		"Databases": "MongoDB & MySQL",
+		"Cloud services": "AWS, GCP, Render and Heroku"
 	},
-	"researchTitle": "RESEARCH ACHIEVEMENTS",
-	"research": [
-		"<a href='https://www.grdjournals.com/article?paper_id=GRDJEV03I050113'>GRD Journals</a> - Automatic License Plate Recognition System (2018)"
-	],
 	"awardsTitle": "HONOURS/AWARDS",
 	"awards": [
 		"<a href='https://www.medidata.com/en/'>MEDIDATA</a> - Heroic Encore Award for Architecting Autoscaling gem (2021)",
 		"<a href='https://www.3ds.com/'>DASSAULT SYSTÈMES</a> - Genius Award for Architecting Autoscaling gem (2021)"
 	],
 	"introTitle": "CAREER PROFILE",
-	"careerProfile": "Graduate student studying Artificial Intelligence from the University of Aberdeen with 4 years of work experience as a software developer in a leading IT firm with technical, interpersonal, and management skills in an agile framework. Along with 1 years experience in Machine learning and Deep learning with proven success in building successful algorithms and predictive models for the healthcare industry (NLP). Passionate engineer and thriving analyst with the ability to apply AI/ML techniques & algorithm development to solve real-world industry problems.",
+	"careerProfile": "As a highly skilled and experienced AI professional, I am passionate about applying cutting-edge AI/ML techniques to solve real-world industry challenges. With 4 years of experience in software development and a strong understanding of AI and Machine Learning, I have a proven track record of developing innovative algorithms that have successfully addressed complex problems. My expertise in developing AI systems and predictive models has been demonstrated in multiple organizations, making me well-equipped to tackle challenges in various industries.",
 	"experienceTitle": "PROFESSIONAL EXPERIENCE",
 	"experiences": [
+		{
+			"designation": "Founding Software Engineer",
+			"duration": "05/2022 - Present",
+			"name&location": "AllotMe, London",
+			"description": "<li>Designed and developed a highly efficient FAQ bot by utilizing GPT architecture and Django framework, and incorporating NLP techniques to deliver accurate responses.</li><li>Enhanced the user experience on the app homepage by implementing a geolocation search and recommendation system.</li><li>Played a key role in driving a monthly user growth rate of over 20% and an average MAU rate of 23%.</li><li>Built the cloud and microservices infrastructure for AllotMe Marketplace in AWS and RoR, laying a strong foundation for its success.</li>"
+		},
 		{
 			"designation": "R&D Engineer and Team Lead",
 			"duration": "10/2020 - 12/2021",
 			"name&location": "Dassault Systèmes, Pune",
-			"description": "<li>Researched various ways of implementing a Machine Learning model to handle the healthcare data and integrate it to generate the abstractive summarization of patient history.</li><li>Lead a team of 10 in developing a System for Cross-domain Identity Management (SCIM)</li><li>Created a uniform approach for autoscaling across services that allows additional considerations, such as CPU usage and throttling times to be factored into autoscaling.</li><li>Successfully reduced the CI/CD build time for multiple services by optimizing code and strategically adding nodes.</li>"
+			"description": "<li>Analyzed health-related data clusters in Medidata using Jenks and K-Means algorithms, resulting in improved insights and more informed data-driven decision-making.</li><li>Displayed exceptional leadership and project management skills by leading a team of 10 in the development of the System for Cross-domain Identity Management (SCIM).</li><li>Optimized system performance by developing a uniform approach to autoscaling across services that incorporated important factors such as CPU usage and throttling times. As a result, AWS costs were reduced by an average of 12% for over 6 services.</li>"
 		},
 		{
 			"designation": "Software Developer and Team Lead",
 			"duration": "06/2018 - 10/2020",
 			"name&location": "MITR Learning and Media, Mumbai",
-			"description": "<li>Project lead for mission critical application which allow users to edit content which is tailored for kids from K-12.</li><li>Delivered a task to make our content filterable through a multitude of custom filters and implement those filters as a set of custom queries and an interactive UI.</li><li>Point person for a collaborative project with Curriculum Associates, a Boston based E-Learning company.</li>"
+			"description": "<li>Skillfully lead the development of a mission-critical application for Curriculum Associates, allowing for seamless editing of content tailored for K-12 students. Implemented custom filters and an interactive UI, resulting in significant cost savings through automation. </li><li>Demonstrated technical expertise and efficiency as a sole developer, delivering multiple projects for various high-profile companies such as Philips, IKEA, Chevron, and Korn Ferry.</li>"
 		},
 		{
 			"designation": "Cybersecurity Intern",
 			"duration": "06/2017 - 07/2017",
 			"name&location": "Reliance Industries Limited, Mumbai",
-			"description": "<li>Researched and help test Mokescreen (Deception technology) to prevent data theft.</li>"
+			"description": "Researched and help test Mokescreen (Deception technology) to prevent data theft."
 		},
 		{
 			"designation": "Strategic Solution Intern",
 			"duration": "06/2016 - 07/2016",
 			"name&location": "Datamatics Global Services Limited, Mumbai",
-			"description": "<li>As a project trainee in Strategic Solutions Group, my responsibilities included researching ways Datamatics could integrate itself into the BPM landscape in India.</li>"
+			"description": "As a project trainee in Strategic Solutions Group, my responsibilities included researching ways Datamatics could integrate itself into the BPM landscape in India."
 		}
 	],
 	"projectTitle": "Projects Highlight",
 	"projectsIntro": "To enhance my skills and hone my craft, I have undertaken below projects.",
 	"projects": [
 		{
-			"title": "<strong>Natural Language Generation for Crypotcurrency",
-			"detail": "Created a NLG system that can be used to generate natural language summary and recommendation for cryptocurrencies based on JSON data.<br><a href='https://crypto-nlg.herokuapp.com/'>crypto-nlg.herokuapp.com</a>"
+			"title": "<strong>Lasso regression and Hyperparameter tuning using sklearn</strong>",
+			"detail": "Body fat prediction model using lasso regression and hyperparameter tuning.<br><a href='https://medium.com/@nandangrover/lasso-regression-and-hyperparameter-tuning-using-sklearn-885c78a37a70'>medium.com/@nandangrover/lasso-regression-and-hyperparameter-tuning</a>"
 		},
 		{
-			"title": "<strong>Microservices using Go</strong>",
-			"detail": "Educational blog and project to help others build scalable microservices using Go.<br><a href='https://medium.com/swlh/creating-microservices-with-go-part-1-2f9aff360db5'>medium.com/swlh/creating-microservices-with-go</a>"
+			"title": "<strong>RNN for sequence-to-sequence classification</strong>",
+			"detail": "Sequence data processing using RNN, GRU and LSTM.<br><a href='https://medium.com/@nandangrover/rnn-for-sequence-to-sequence-classification-5d41a2b6d8fd'>medium.com/@nandangrover/rnn-for-sequence-to-sequence-classification</a>"
 		},
 		{
-			"title": "<strong>Domestic Robot in JASON</strong>",
-			"detail": "Multiagent system with a cleaning robot, house robot, and a concierge robot in JASON programming language along with it's GUI environment in Java.<br><a href='https://github.com/nandangrover/domestic-robot-jason'>github.com/nandangrover/domestic-robot-jason</a>"
+			"title": "<strong>Reinforcement Learning in 10x10 FrozenLake</strong>",
+			"detail": "Q-Learning and Deep-Q Learning were used to solve 10*10 FrozenLake Environment <br><a href='https://medium.com/@nandangrover/a-deep-dive-into-reinforcement-learning-q-learning-and-deep-q-learning-on-a-10x10-frozenlake-c76d56810a46'>medium.com/@nandangrover/a-deep-dive-into-reinforcement-learning</a>"
 		},
 		{
-			"title": "<strong>Self Driving Car</strong>",
-			"detail": "Implemented concepts of Deep Q-Learning and Machine Learning to build a self driving car.<br><a href='https://github.com/nandangrover/self_driving_car'>github.com/nandangrover/self_driving_car</a>"
+			"title": "<strong>AllotMe v1.1 Launch</strong>",
+			"detail": "Introducing a New Listing Method on AllotMe, which resulted in a significant increase of over 30% in monthly listings. Read more about it here: <a href='https://www.about.allotme.co.uk/post/introducing-allotme-v1-1'>about.allotme.co.uk/post/introducing-allotme-v1-1</a>"
 		}
 	]
 }
