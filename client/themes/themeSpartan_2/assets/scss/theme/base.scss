@@ -11,6 +11,7 @@ body {
     display: inline-flex;
 }
 
+
 h1, h2, h3, h4, h5, h6  {
     font-weight: 700;
 }
@@ -49,6 +50,7 @@ p {
     color: #fff;
     a {
         color: #fff;
+        word-break: break-all;
     }
     .profile-container {
         padding: 30px;
