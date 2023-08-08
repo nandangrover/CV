@@ -16,6 +16,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.list-unstyled.languages-list li {
+    padding-bottom: 10px;
+  }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
@@ -63,6 +67,7 @@ p {
 
 .sidebar-wrapper a {
   color: #fff;
+  word-break: break-all;
 }
 
 .sidebar-wrapper .profile-container {
@@ -175,7 +180,7 @@ p {
 
 .contact-socials {
   display: grid;
-  grid-template-columns: 12% 75%;
+  grid-template-columns: 12% 88%;
   align-items: center;
   justify-content: start;
 }

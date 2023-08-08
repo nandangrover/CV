@@ -41,6 +41,11 @@ p {
   line-height: 1.5;
 }
 
+
+.list-unstyled.languages-list li {
+  padding-bottom: 10px;
+}
+
 .wrapper {
   background: #4B6A78;
   max-width: 960px;
@@ -63,6 +68,7 @@ p {
 
 .sidebar-wrapper a {
   color: #fff;
+  word-break: break-all;
 }
 
 .sidebar-wrapper .profile-container {
@@ -179,7 +185,7 @@ p {
 
 .contact-socials {
   display: grid;
-  grid-template-columns: 12% 75%;
+  grid-template-columns: 12% 88%;
   align-items: center;
   justify-content: start;
 }
