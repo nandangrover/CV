@@ -211,11 +211,16 @@ class themeSpartan_2 {
 
     const summary = document.getElementsByClassName("summary-section")[0];
     const summaryTitle = summary.getElementsByTagName("h2")[0];
-    let summarySpan = summaryTitle.firstChild;
-    summaryTitle.innerHTML = this.config.introTitle;
-    summaryTitle.prepend(summarySpan);
-    const summaryText = summary.getElementsByTagName("div")[0];
-    summaryText.innerHTML = `<p>${this.config.careerProfile}</p>`;
+
+    if (this.config.introTitle) {
+      let summarySpan = summaryTitle.firstChild;
+      summaryTitle.innerHTML = this.config.introTitle;
+      summaryTitle.prepend(summarySpan);
+      const summaryText = summary.getElementsByTagName("div")[0];
+      summaryText.innerHTML = `<p>${this.config.careerProfile}</p>`;
+    } else {
+      summary.remove();
+    }
 
     const experience = document.getElementsByClassName(
       "experiences-section"
