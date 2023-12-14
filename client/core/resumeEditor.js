@@ -110,6 +110,15 @@ class resumeEditor {
   }
 
   async submitJsonChange() {
+    // Before submitting check if it's valid JSON, if not, alert the user
+    const jsonData = this.codeEditor.getValue();
+    try {
+      JSON.parse(jsonData);
+    } catch (e) {
+      alert('Invalid JSON. Please check your JSON and try again');
+      return;
+    }
+
     let config = {};
     try {
       config = await gateway.updateJson(this.inputId, this.themeSelected, this.codeEditor.getValue());
